@@ -1,0 +1,337 @@
+TRitopApp
+v7
+r0
+t299543231.968910
+cCheck dependencies
+cCpResource build/Debug-iphoneos/RitopApp.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/Info.plist RitopApp-Info.plist
+cCompileXIB /Users/tonisuter/RitopApp/MainWindow.xib
+cCompileXIB /Users/tonisuter/RitopApp/RitopAppViewController.xib
+cProcessPCH /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch.gch RitopApp_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/main.o /Users/tonisuter/RitopApp/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppAppDelegate.o /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppViewController.o /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp normal armv7
+cGenerateDSYMFile /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app.dSYM /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp
+cProcessProductPackaging "/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/2E2E7D9E-4738-450E-899D-C01F32817623.mobileprovision" /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision
+cTouch /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent
+cCodeSign /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk
+c000000004C059C0E0000000000000110
+t1275436046
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist
+c000000004C05620900000000000001A7
+t1275421193
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+c000000004B9F103D00000000000001E5
+t1268715581
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BA03AC100000000003B4B70
+t1268792001
+s3885936
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004B9F26D2000000000036A650
+t1268721362
+s3581520
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004B9F26B90000000000001355
+t1268721337
+s4949
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004B9F318D000000000000098F
+t1268724109
+s2447
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004B9F32090000000002703230
+t1268724233
+s40907312
+
+N/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/26857A60-35FD-43EF-8008-4D63EE9C866D.mobileprovision
+c000000004C2A472D0000000000001C42
+t1277839149
+s7234
+
+N/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/2E2E7D9E-4738-450E-899D-C01F32817623.mobileprovision
+c000000004C2A6A190000000000001C48
+t1277848089
+s7240
+
+N/Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.h
+c000000004C2A46F200000000000001E4
+t1277839090
+s484
+i<UIKit/UIKit.h>
+
+N/Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m
+c000000004C2A46F200000000000007AE
+t1277839090
+s1966
+i"RitopAppAppDelegate.h"
+i"RitopAppViewController.h"
+
+N/Users/tonisuter/RitopApp/Classes/RitopAppViewController.h
+c000000004C2A46F300000000000000F0
+t1277839091
+s240
+i<UIKit/UIKit.h>
+
+N/Users/tonisuter/RitopApp/Classes/RitopAppViewController.m
+c000000004C2A67300000000000000D21
+t1277847344
+s3361
+i"RitopAppViewController.h"
+
+N/Users/tonisuter/RitopApp/MainWindow.xib
+c000000004C2A46F30000000000004D13
+t1277839091
+s19731
+
+N/Users/tonisuter/RitopApp/RitopAppViewController.xib
+c000000004C2A46F30000000000003EE5
+t1277839091
+s16101
+
+N/Users/tonisuter/RitopApp/RitopApp_Prefix.pch
+c000000004C2A46F300000000000000B9
+t1277839091
+s185
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app
+t1277850420
+s374
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app.dSYM
+t1277848157
+s102
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/Info.plist
+t1277850280
+s940
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/MainWindow.nib
+t1277848154
+s1125
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/PkgInfo
+t1277850280
+s8
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/ResourceRules.plist
+t1277848148
+s485
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp
+t1277848157
+s23616
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopAppViewController.nib
+t1277848154
+s764
+
+N/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision
+t1277850280
+s7240
+
+N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopApp.LinkFileList
+c000000004C2A6A53000000000000015C
+t1277848147
+s348
+
+N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppAppDelegate.o
+t1277848156
+s44472
+
+N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppViewController.o
+t1277848156
+s46620
+
+N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/main.o
+t1277848156
+s6396
+
+N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent
+t1277850280
+s428
+
+N/Users/tonisuter/RitopApp/main.m
+c000000004C2A46F30000000000000169
+t1277839091
+s361
+i<UIKit/UIKit.h>
+
+N/var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch.gch
+t1277848155
+s9421460
+
+NRitopApp-Info.plist
+c000000004C2A6B6E0000000000000494
+t1277848430
+s1172
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies299543231#299543231#0(0"0(0#1#0"8604997600#0"0#
+
+CCodeSign /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app
+s299543219.920004
+e299543220.056359
+r1
+xCodeSign
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app
+o/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app: replacing existing signature
+lSLF07#2@42"CodeSign build/Debug-iphoneos/RitopApp.app299543219#299543220#0(90"/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app: replacing existing signature0(0#0#59"/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app27584749588447344#599"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Toni Suter (NAJ87AFX8Q)" --resource-rules=/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/ResourceRules.plist --entitlements /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app0#
+
+CCompileC build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppAppDelegate.o /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s299540956.006261
+e299540956.140339
+r1
+xCompileC
+xbuild/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppAppDelegate.o
+x/Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m299540956#299540956#0(0"0(0#0#55"/Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m8607109120#1639"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphoneos -I/Users/tonisuter/RitopApp/build/Debug-iphoneos/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources/armv7 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppAppDelegate.o0#
+
+CCompileC build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppViewController.o /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s299540956.122200
+e299540956.200938
+r1
+xCompileC
+xbuild/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppViewController.o
+x/Users/tonisuter/RitopApp/Classes/RitopAppViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m299540956#299540956#0(0"0(0#0#58"/Users/tonisuter/RitopApp/Classes/RitopAppViewController.m8605482176#1645"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphoneos -I/Users/tonisuter/RitopApp/build/Debug-iphoneos/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources/armv7 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopAppViewController.o0#
+
+CCompileC build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/main.o /Users/tonisuter/RitopApp/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s299540956.005146
+e299540956.122029
+r1
+xCompileC
+xbuild/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/main.o
+x/Users/tonisuter/RitopApp/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@40"Compile /Users/tonisuter/RitopApp/main.m299540956#299540956#0(0"0(0#0#32"/Users/tonisuter/RitopApp/main.m8608080032#1601"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphoneos -I/Users/tonisuter/RitopApp/build/Debug-iphoneos/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources/armv7 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/main.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/main.o0#
+
+CCompileXIB /Users/tonisuter/RitopApp/MainWindow.xib
+s299540948.032187
+e299540954.828991
+r1
+xCompileXIB
+x/Users/tonisuter/RitopApp/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib299540948#299540954#0(0"0(0#0#40"/Users/tonisuter/RitopApp/MainWindow.xib8607002496#504"    cd /Users/tonisuter/RitopApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/MainWindow.nib /Users/tonisuter/RitopApp/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk0#
+
+CCompileXIB /Users/tonisuter/RitopApp/RitopAppViewController.xib
+s299540948.032979
+e299540954.827683
+r1
+xCompileXIB
+x/Users/tonisuter/RitopApp/RitopAppViewController.xib
+lSLF07#2@37"CompileXIB RitopAppViewController.xib299540948#299540954#0(0"0(0#0#52"/Users/tonisuter/RitopApp/RitopAppViewController.xib8605585984#528"    cd /Users/tonisuter/RitopApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopAppViewController.nib /Users/tonisuter/RitopApp/RitopAppViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk0#
+
+CCpResource build/Debug-iphoneos/RitopApp.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+s299540947.986029
+e299540948.032106
+r1
+xCpResource
+xbuild/Debug-iphoneos/RitopApp.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist299540948#299540948#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist3419159298929816064#455"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app0#
+
+CGenerateDSYMFile /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app.dSYM /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp
+s299540957.020002
+e299540957.038079
+r1
+xGenerateDSYMFile
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app.dSYM
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp
+lSLF07#2@98"GenerateDSYMFile build/Debug-iphoneos/RitopApp.app.dSYM build/Debug-iphoneos/RitopApp.app/RitopApp299540957#299540957#0(0"0(0#0#68"/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp8606637664#326"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp -o /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app.dSYM0#
+
+CLd /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp normal armv7
+s299540956.201089
+e299540957.019801
+r1
+xLd
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp
+xnormal
+xarmv7
+lSLF07#2@73"Link /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp299540956#299540957#0(0"0(0#0#0"8603136384#762"    cd /Users/tonisuter/RitopApp    setenv IPHONEOS_DEPLOYMENT_TARGET 3.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -L/Users/tonisuter/RitopApp/build/Debug-iphoneos -F/Users/tonisuter/RitopApp/build/Debug-iphoneos -filelist /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/Objects-normal/armv7/RitopApp.LinkFileList -dead_strip -miphoneos-version-min=3.2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/RitopApp0#
+
+CProcessInfoPlistFile /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/Info.plist RitopApp-Info.plist
+s299543080.868588
+e299543080.895466
+r1
+xProcessInfoPlistFile
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/Info.plist
+xRitopApp-Info.plist
+lSLF07#2@27"Process RitopApp-Info.plist299543080#299543080#0(0"0(0#0#45"/Users/tonisuter/RitopApp/RitopApp-Info.plist8609014880#514"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility RitopApp-Info.plist -genpkginfo /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/ResourceRules.plist -o /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/Info.plist0#
+
+CProcessPCH /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch.gch RitopApp_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s299540954.829229
+e299540956.005025
+r1
+xProcessPCH
+x/var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch.gch
+xRitopApp_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@30"Precompile RitopApp_Prefix.pch299540954#299540956#0(0"0(0#0#45"/Users/tonisuter/RitopApp/RitopApp_Prefix.pch8606951520#1511"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphoneos -I/Users/tonisuter/RitopApp/build/Debug-iphoneos/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources/armv7 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/DerivedSources -c /Users/tonisuter/RitopApp/RitopApp_Prefix.pch -o /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-epifduirvwfbjrcdlrqghoqyjawr/RitopApp_Prefix.pch.gch0#
+
+CProcessProductPackaging "/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/26857A60-35FD-43EF-8008-4D63EE9C866D.mobileprovision" /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision
+s299540957.038183
+e299540957.099087
+r1
+xProcessProductPackaging
+x/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/26857A60-35FD-43EF-8008-4D63EE9C866D.mobileprovision
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision
+lSLF07#2@197"ProcessProductPackaging "/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/26857A60-35FD-43EF-8008-4D63EE9C866D.mobileprovision" build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision299540957#299540957#0(0"0(0#0#84"/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision8603316352#402"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/26857A60-35FD-43EF-8008-4D63EE9C866D.mobileprovision" -o /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/2E2E7D9E-4738-450E-899D-C01F32817623.mobileprovision" /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision
+s299543080.896118
+e299543080.910463
+r1
+xProcessProductPackaging
+x/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/2E2E7D9E-4738-450E-899D-C01F32817623.mobileprovision
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision
+lSLF07#2@197"ProcessProductPackaging "/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/2E2E7D9E-4738-450E-899D-C01F32817623.mobileprovision" build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision299543080#299543080#0(0"0(0#0#84"/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision8607693856#402"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/tonisuter/Library/MobileDevice/Provisioning Profiles/2E2E7D9E-4738-450E-899D-C01F32817623.mobileprovision" -o /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent
+s299543080.926213
+e299543080.939728
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist
+x/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent
+lSLF07#2@178"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent299543080#299543080#0(0"0(0#0#91"/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent8605901920#409"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphoneos/RitopApp.build/RitopApp.xcent0#
+
+CTouch /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app
+s299543080.910525
+e299543080.926123
+r1
+xTouch
+x/Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app
+lSLF07#2@65"Touch /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app299543080#299543080#0(0"0(0#0#0"8606826880#239"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/tonisuter/RitopApp/build/Debug-iphoneos/RitopApp.app0#
+
