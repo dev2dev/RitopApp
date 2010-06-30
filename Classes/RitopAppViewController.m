@@ -10,6 +10,8 @@
 
 @implementation RitopAppViewController
 
+@synthesize myStyledTableViewController;
+
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -22,27 +24,30 @@
 */
 
 - (void)loadView {
-	UITableViewController *myTableViewController1 = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+	myStyledTableViewController = [[StyledTableViewController alloc] init];
 	
-	[myTableViewController1 setTitle:@"NavigationController 1"];
-	UINavigationController *myNavigationController1 = [[UINavigationController alloc] initWithRootViewController:myTableViewController1];
+	[myStyledTableViewController setTitle:@"NavigationController 1"];
+	UINavigationController *myNavigationController1 = [[UINavigationController alloc] initWithRootViewController:myStyledTableViewController];
 	[myNavigationController1 setTitle:@"Page 1"];
+	[myNavigationController1 setTabBarItem:[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0]];
 	[myNavigationController1 setToolbarHidden:NO];
 	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
 																				 target:self 
 																				 action:@selector(addSomething:)];
-	[myTableViewController1 setToolbarItems:[NSArray arrayWithObjects:addButton, nil] animated:YES];
+	[myStyledTableViewController setToolbarItems:[NSArray arrayWithObjects:addButton, nil] animated:YES];
 	 
 	
 	UIViewController *myViewController2 = [[UIViewController alloc] init];
 	[myViewController2 setTitle:@"NavigationController 2"];
 	UINavigationController *myNavigationController2 = [[UINavigationController alloc] initWithRootViewController:myViewController2];
 	[myNavigationController2 setTitle:@"Page 2"];
+	[myNavigationController2 setTabBarItem:[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:1]];
 	
 	UIViewController *myViewController3 = [[UIViewController alloc] init];
 	[myViewController3 setTitle:@"NavigationController 3"];
 	UINavigationController *myNavigationController3 = [[UINavigationController alloc] initWithRootViewController:myViewController3];
 	[myNavigationController3 setTitle:@"Page 3"];
+	[myNavigationController3 setTabBarItem:[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:2]];
 	
 	UITabBarController *myTabBarController = [[UITabBarController alloc] init];
 	[myTabBarController setViewControllers:[NSArray arrayWithObjects:myNavigationController1, myNavigationController2, myNavigationController3, nil]];

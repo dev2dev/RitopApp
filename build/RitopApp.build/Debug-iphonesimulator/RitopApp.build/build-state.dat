@@ -1,7 +1,7 @@
 TRitopApp
 v7
 r0
-t299540183.067482
+t299620460.661405
 cCheck dependencies
 cProcessInfoPlistFile /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/Info.plist RitopApp-Info.plist
 cCompileXIB /Users/tonisuter/RitopApp/MainWindow.xib
@@ -10,6 +10,7 @@ cProcessPCH /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode
 cCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/main.o /Users/tonisuter/RitopApp/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppAppDelegate.o /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppViewController.o /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/StyledTableViewController.o /Users/tonisuter/RitopApp/Classes/StyledTableViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp normal i386
 cGenerateDSYMFile /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app.dSYM /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp
 cTouch /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app
@@ -58,16 +59,29 @@ i"RitopAppAppDelegate.h"
 i"RitopAppViewController.h"
 
 N/Users/tonisuter/RitopApp/Classes/RitopAppViewController.h
-c000000004C2A46F300000000000000F0
-t1277839091
-s240
+c000000004C2B9F8B00000000000001A3
+t1277927307
+s419
 i<UIKit/UIKit.h>
+i"StyledTableViewController.h"
 
 N/Users/tonisuter/RitopApp/Classes/RitopAppViewController.m
-c000000004C2A67300000000000000D21
-t1277847344
-s3361
+c000000004C2B9F580000000000000D4C
+t1277927256
+s3404
 i"RitopAppViewController.h"
+
+N/Users/tonisuter/RitopApp/Classes/StyledTableViewController.h
+c000000004C2B9FB7000000000000014E
+t1277927351
+s334
+i<UIKit/UIKit.h>
+
+N/Users/tonisuter/RitopApp/Classes/StyledTableViewController.m
+c000000004C2BA0EC00000000000011E2
+t1277927660
+s4578
+i"StyledTableViewController.h"
 
 N/Users/tonisuter/RitopApp/MainWindow.xib
 c000000004C2A46F30000000000004D13
@@ -87,45 +101,49 @@ i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app
-t1277847351
+t1277927660
 s238
 
 N/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app.dSYM
-t1277847351
+t1277927660
 s102
 
 N/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/Info.plist
-t1277839233
-s802
+t1277851114
+s805
 
 N/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/MainWindow.nib
 t1277839234
 s1125
 
 N/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/PkgInfo
-t1277839233
+t1277851114
 s8
 
 N/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp
-t1277847351
-s18024
+t1277927660
+s25420
 
 N/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopAppViewController.nib
 t1277839234
 s764
 
 N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopApp.LinkFileList
-c000000004C2A4781000000000000016E
-t1277839233
-s366
+c000000004C2B9EEC00000000000001F2
+t1277927148
+s498
 
 N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppAppDelegate.o
-t1277839236
-s45068
+t1277927519
+s45508
 
 N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppViewController.o
-t1277847351
-s47144
+t1277927519
+s49044
+
+N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/StyledTableViewController.o
+t1277927660
+s41184
 
 N/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/main.o
 t1277839236
@@ -142,17 +160,17 @@ t1277839235
 s13825936
 
 NRitopApp-Info.plist
-c000000004C2A46F300000000000004D6
-t1277839091
-s1238
+c000000004C2A757A0000000000000494
+t1277851002
+s1172
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies299540183#299540183#0(0"0(0#1#0"8618812480#0"0#
+lSLF07#2@18"Check dependencies299620460#299620460#0(0"0(0#1#0"8614721728#0"0#
 
 CCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppAppDelegate.o /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299532036.031781
-e299532036.241802
+s299620319.021918
+e299620319.149665
 r1
 xCompileC
 xbuild/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppAppDelegate.o
@@ -161,11 +179,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@63"Compile /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m299532036#299532036#0(0"0(0#0#55"/Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m8610640256#1816"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -I/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources/i386 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-cxujlsdmclwetuaykyzenpjsyalf/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppAppDelegate.o0#
+lSLF07#2@63"Compile /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m299620319#299620319#0(0"0(0#0#55"/Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m8616571200#1816"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -I/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources/i386 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-cxujlsdmclwetuaykyzenpjsyalf/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/Classes/RitopAppAppDelegate.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppAppDelegate.o0#
 
 CCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppViewController.o /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299540151.555115
-e299540151.691324
+s299620319.023732
+e299620319.229521
 r1
 xCompileC
 xbuild/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppViewController.o
@@ -174,7 +192,20 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@66"Compile /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m299540151#299540151#0(0"0(0#0#58"/Users/tonisuter/RitopApp/Classes/RitopAppViewController.m8620100608#1822"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -I/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources/i386 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-cxujlsdmclwetuaykyzenpjsyalf/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppViewController.o0#
+lSLF07#2@66"Compile /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m299620319#299620319#0(0"0(0#0#58"/Users/tonisuter/RitopApp/Classes/RitopAppViewController.m8616400704#1822"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -I/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources/i386 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-cxujlsdmclwetuaykyzenpjsyalf/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/Classes/RitopAppViewController.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopAppViewController.o0#
+
+CCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/StyledTableViewController.o /Users/tonisuter/RitopApp/Classes/StyledTableViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299620460.403114
+e299620460.606343
+r1
+xCompileC
+xbuild/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/StyledTableViewController.o
+x/Users/tonisuter/RitopApp/Classes/StyledTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/tonisuter/RitopApp/Classes/StyledTableViewController.m299620460#299620460#0(0"0(0#0#61"/Users/tonisuter/RitopApp/Classes/StyledTableViewController.m8614166240#1828"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -I/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources/i386 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources -include /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-cxujlsdmclwetuaykyzenpjsyalf/RitopApp_Prefix.pch -c /Users/tonisuter/RitopApp/Classes/StyledTableViewController.m -o /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/StyledTableViewController.o0#
 
 CCompileC build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/main.o /Users/tonisuter/RitopApp/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299532036.030583
@@ -208,32 +239,32 @@ oCouldn't open shared capabilities memory GSCapabilities (No such file or direct
 lSLF07#2@37"CompileXIB RitopAppViewController.xib299532033#299532034#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#52"/Users/tonisuter/RitopApp/RitopAppViewController.xib8605021568#556"    cd /Users/tonisuter/RitopApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopAppViewController.nib /Users/tonisuter/RitopApp/RitopAppViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
 
 CGenerateDSYMFile /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app.dSYM /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp
-s299540151.718513
-e299540151.737670
+s299620460.630427
+e299620460.657285
 r1
 xGenerateDSYMFile
 x/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app.dSYM
 x/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp
-lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/RitopApp.app.dSYM build/Debug-iphonesimulator/RitopApp.app/RitopApp299540151#299540151#0(0"0(0#0#75"/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp8620872224#347"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp -o /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app.dSYM0#
+lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/RitopApp.app.dSYM build/Debug-iphonesimulator/RitopApp.app/RitopApp299620460#299620460#0(0"0(0#0#75"/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp8614371776#347"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp -o /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app.dSYM0#
 
 CLd /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp normal i386
-s299540151.691412
-e299540151.718272
+s299620460.606425
+e299620460.630332
 r1
 xLd
 x/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp
 xnormal
 xi386
-lSLF07#2@80"Link /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp299540151#299540151#0(0"0(0#0#0"8620940480#840"    cd /Users/tonisuter/RitopApp    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -filelist /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopApp.LinkFileList -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp0#
+lSLF07#2@80"Link /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp299620460#299620460#0(0"0(0#0#0"8614437952#840"    cd /Users/tonisuter/RitopApp    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -filelist /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/Objects-normal/i386/RitopApp.LinkFileList -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/RitopApp0#
 
 CProcessInfoPlistFile /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/Info.plist RitopApp-Info.plist
-s299532033.613113
-e299532033.633097
+s299543914.876914
+e299543914.891599
 r1
 xProcessInfoPlistFile
 x/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/Info.plist
 xRitopApp-Info.plist
-lSLF07#2@27"Process RitopApp-Info.plist299532033#299532033#0(0"0(0#0#45"/Users/tonisuter/RitopApp/RitopApp-Info.plist23081149961207920#443"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility RitopApp-Info.plist -genpkginfo /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/Info.plist0#
+lSLF07#2@27"Process RitopApp-Info.plist299543914#299543914#0(0"0(0#0#45"/Users/tonisuter/RitopApp/RitopApp-Info.plist23081149961207920#443"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility RitopApp-Info.plist -genpkginfo /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app/Info.plist0#
 
 CProcessPCH /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-cxujlsdmclwetuaykyzenpjsyalf/RitopApp_Prefix.pch.gch RitopApp_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s299532034.425577
@@ -249,10 +280,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@30"Precompile RitopApp_Prefix.pch299532034#299532036#0(0"0(0#0#45"/Users/tonisuter/RitopApp/RitopApp_Prefix.pch8609800160#1682"    cd /Users/tonisuter/RitopApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-generated-files.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-own-target-headers.hmap -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-all-target-headers.hmap -iquote /Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/RitopApp-project-headers.hmap -F/Users/tonisuter/RitopApp/build/Debug-iphonesimulator -I/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/include -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources/i386 -I/Users/tonisuter/RitopApp/build/RitopApp.build/Debug-iphonesimulator/RitopApp.build/DerivedSources -c /Users/tonisuter/RitopApp/RitopApp_Prefix.pch -o /var/folders/P2/P2OjI7XhGSKGvvIOnxqgG++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RitopApp_Prefix-cxujlsdmclwetuaykyzenpjsyalf/RitopApp_Prefix.pch.gch0#
 
 CTouch /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app
-s299540151.737765
-e299540151.741285
+s299620460.657728
+e299620460.661353
 r1
 xTouch
 x/Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app
-lSLF07#2@72"Touch /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app299540151#299540151#0(0"0(0#0#0"8620740416#253"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app0#
+lSLF07#2@72"Touch /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app299620460#299620460#0(0"0(0#0#0"8614273216#253"    cd /Users/tonisuter/RitopApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/tonisuter/RitopApp/build/Debug-iphonesimulator/RitopApp.app0#
 
