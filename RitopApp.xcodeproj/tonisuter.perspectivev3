@@ -277,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
+									<integer>9</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -300,7 +300,7 @@
 							<real>185</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>58 193 1690 973 0 0 1920 1178 </string>
+						<string>31 194 1690 973 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -318,7 +318,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1E4FAB4011DA7F2C00819765</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RitopAppAppDelegate.m</string>
+								<string>SplashScreenViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,21 +326,23 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1E4FAB4111DA7F2C00819765</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RitopAppAppDelegate.m</string>
+										<string>SplashScreenViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1E69C2F211DDA45B000F2A77</string>
+										<string>1E69C37011DDABD6000F2A77</string>
 										<key>history</key>
 										<array>
-											<string>1EC1AF9B11DBE46A00BA9A41</string>
-											<string>1EBDACFF11DBE5E000369B08</string>
 											<string>1E11199311DBE62800C72CCF</string>
-											<string>1E69C2E811DDA3E3000F2A77</string>
 											<string>1E69C2E911DDA3E3000F2A77</string>
 											<string>1E69C2EA11DDA3E3000F2A77</string>
-											<string>1E69C2EB11DDA3E3000F2A77</string>
-											<string>1E69C2F111DDA43B000F2A77</string>
+											<string>1E69C31311DDA5F9000F2A77</string>
+											<string>1E69C31411DDA5F9000F2A77</string>
+											<string>1E69C36B11DDABD6000F2A77</string>
+											<string>1E69C36C11DDABD6000F2A77</string>
+											<string>1E69C36D11DDABD6000F2A77</string>
+											<string>1E69C36E11DDABD6000F2A77</string>
+											<string>1E69C36F11DDABD6000F2A77</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -354,18 +356,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1483, 623}}</string>
+								<string>{{0, 0}, {1483, 927}}</string>
 								<key>RubberWindowFrame</key>
-								<string>58 193 1690 973 0 0 1920 1178 </string>
+								<string>31 194 1690 973 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>623pt</string>
+							<string>927pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>304pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -379,9 +381,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1483, 277}}</string>
+										<string>{{10, 27}, {1483, -27}}</string>
 										<key>RubberWindowFrame</key>
-										<string>58 193 1690 973 0 0 1920 1178 </string>
+										<string>31 194 1690 973 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -662,7 +664,7 @@
 		<string>/Users/tonisuter/RitopApp/RitopApp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>58 193 1690 973 0 0 1920 1178 </string>
+	<string>31 194 1690 973 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

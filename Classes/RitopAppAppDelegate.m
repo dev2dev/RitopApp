@@ -7,23 +7,20 @@
 //
 
 #import "RitopAppAppDelegate.h"
-#import "RitopAppViewController.h"
+#import "SplashScreenViewController.h"
 
 @implementation RitopAppAppDelegate
 
 @synthesize window;
-@synthesize viewController;
-
-
-#pragma mark -
-#pragma mark Application lifecycle
+@synthesize splashScreenViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	[window setBackgroundColor:[UIColor whiteColor]];
 	
-	self.viewController = [[RitopAppViewController alloc] init];
-    [window addSubview:viewController.view];
+	self.splashScreenViewController = [[SplashScreenViewController alloc] init];
+	
+    [window addSubview:splashScreenViewController.view];
     [window makeKeyAndVisible];
 
 	return YES;
@@ -52,10 +49,6 @@
      */
 }
 
-
-#pragma mark -
-#pragma mark Memory management
-
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     /*
      Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
@@ -64,7 +57,7 @@
 
 
 - (void)dealloc {
-    [viewController release];
+    [splashScreenViewController release];
     [window release];
     [super dealloc];
 }

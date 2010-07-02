@@ -12,6 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		1E3CF09E11DBD5EE00EEC2DF /* StyledTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CF09D11DBD5EE00EEC2DF /* StyledTableViewController.m */; };
+		1E69C2FC11DDA4B0000F2A77 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E69C2FB11DDA4B0000F2A77 /* SplashScreenViewController.m */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* RitopAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* RitopAppViewController.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1E3CF09C11DBD5EE00EEC2DF /* StyledTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledTableViewController.h; sourceTree = "<group>"; };
 		1E3CF09D11DBD5EE00EEC2DF /* StyledTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledTableViewController.m; sourceTree = "<group>"; };
+		1E69C2FA11DDA4B0000F2A77 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		1E69C2FB11DDA4B0000F2A77 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28D7ACF60DDB3853001CB0EB /* RitopAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RitopAppViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* RitopAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RitopAppViewController.m; sourceTree = "<group>"; };
@@ -55,6 +58,8 @@
 				28D7ACF70DDB3853001CB0EB /* RitopAppViewController.m */,
 				1E3CF09C11DBD5EE00EEC2DF /* StyledTableViewController.h */,
 				1E3CF09D11DBD5EE00EEC2DF /* StyledTableViewController.m */,
+				1E69C2FA11DDA4B0000F2A77 /* SplashScreenViewController.h */,
+				1E69C2FB11DDA4B0000F2A77 /* SplashScreenViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				1D3623260D0F684500981E51 /* RitopAppAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* RitopAppViewController.m in Sources */,
 				1E3CF09E11DBD5EE00EEC2DF /* StyledTableViewController.m in Sources */,
+				1E69C2FC11DDA4B0000F2A77 /* SplashScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

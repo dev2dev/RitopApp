@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class RitopAppViewController;
+@class SplashScreenViewController;
 
 @interface RitopAppAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    RitopAppViewController *viewController;
+    SplashScreenViewController *splashScreenViewController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet RitopAppViewController *viewController;
+@property (nonatomic, retain) UIWindow *window;
+@property (nonatomic, retain) SplashScreenViewController *splashScreenViewController;
 
 @end
 
