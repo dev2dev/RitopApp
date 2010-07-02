@@ -19,8 +19,10 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after app launch. 
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	[window setBackgroundColor:[UIColor whiteColor]];
+	
+	self.viewController = [[RitopAppViewController alloc] init];
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
 
