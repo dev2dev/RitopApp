@@ -13,4 +13,6 @@
 @property (nonatomic, retain) UIToolbar *toolbar;
 @property (nonatomic, retain) SettingsModalViewController *settingsModalViewController;
 
+- (void)showSettings:(id)sender;
+
 @end

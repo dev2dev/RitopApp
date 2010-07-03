@@ -10,20 +10,22 @@
 
 - (void)loadView {
 	self.view = [[UIView alloc] init];
-	[self.view setBackgroundColor:[UIColor darkGrayColor]];
+	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"pattern02.png"]]];
 	[self setTitle:@"DetailViews"];
 	self.toolbar = [[UIToolbar alloc] init];
+	[self.toolbar setTintColor:[UIColor darkGrayColor]];
 	[self.toolbar sizeToFit];
 	[self.toolbar setItems:[NSMutableArray arrayWithObjects:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
-															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(show:)],
+															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(showSettings:)],
 															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
 															nil]];
 	[self.view addSubview:self.toolbar];
 }
 
-- (void)show:(id)sender  {
+- (void)showSettings:(id)sender  {
 	self.settingsModalViewController = [[SettingsModalViewController alloc] init];
 	UINavigationController *settingsNavigationViewController = [[UINavigationController alloc] initWithRootViewController:self.settingsModalViewController];
+	[[settingsNavigationViewController navigationBar] setTintColor:[UIColor darkGrayColor]];
 	[settingsNavigationViewController setModalPresentationStyle:UIModalPresentationFormSheet];
 	[[self splitViewController] presentModalViewController:settingsNavigationViewController animated:YES];
 }

@@ -24,6 +24,7 @@
 	self.mainRootViewController = [[MainRootViewController alloc] init];
 	self.mainDetailViewController = [[MainDetailViewController alloc] init];
 	self.mainRootNavigationController = [[UINavigationController alloc] initWithRootViewController:self.mainRootViewController];
+	[[self.mainRootNavigationController navigationBar] setTintColor:[UIColor darkGrayColor]];
 	
 	[self.mainSplitViewController setDelegate:self.mainDetailViewController];
 	[self.mainSplitViewController setViewControllers:[NSArray arrayWithObjects:self.mainRootNavigationController, self.mainDetailViewController, nil]];
