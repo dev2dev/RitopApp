@@ -12,6 +12,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		1E5F451911DF8461000B750B /* MainSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F451811DF8461000B750B /* MainSplitViewController.m */; };
+		1E5F458511DF8D8B000B750B /* SettingsModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F458411DF8D8B000B750B /* SettingsModalViewController.m */; };
+		1E5F459311DF8FEE000B750B /* pattern01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E5F459211DF8FEE000B750B /* pattern01.gif */; };
 		1E69C2FC11DDA4B0000F2A77 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E69C2FB11DDA4B0000F2A77 /* SplashScreenViewController.m */; };
 		1E6C373311DF553F00096C39 /* MainDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C373211DF553F00096C39 /* MainDetailViewController.m */; };
 		1E6C374211DF579700096C39 /* MainRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C374111DF579700096C39 /* MainRootViewController.m */; };
@@ -26,6 +28,9 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1E5F451711DF8461000B750B /* MainSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSplitViewController.h; sourceTree = "<group>"; };
 		1E5F451811DF8461000B750B /* MainSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSplitViewController.m; sourceTree = "<group>"; };
+		1E5F458311DF8D8B000B750B /* SettingsModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsModalViewController.h; sourceTree = "<group>"; };
+		1E5F458411DF8D8B000B750B /* SettingsModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsModalViewController.m; sourceTree = "<group>"; };
+		1E5F459211DF8FEE000B750B /* pattern01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pattern01.gif; sourceTree = "<group>"; };
 		1E69C2FA11DDA4B0000F2A77 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		1E69C2FB11DDA4B0000F2A77 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		1E6C373111DF553F00096C39 /* MainDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDetailViewController.h; sourceTree = "<group>"; };
@@ -65,6 +70,8 @@
 				1E6C374111DF579700096C39 /* MainRootViewController.m */,
 				1E5F451711DF8461000B750B /* MainSplitViewController.h */,
 				1E5F451811DF8461000B750B /* MainSplitViewController.m */,
+				1E5F458311DF8D8B000B750B /* SettingsModalViewController.h */,
+				1E5F458411DF8D8B000B750B /* SettingsModalViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E5F459211DF8FEE000B750B /* pattern01.gif */,
 				8D1107310486CEB800E47090 /* RitopApp-Info.plist */,
 			);
 			name = Resources;
@@ -158,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5F459311DF8FEE000B750B /* pattern01.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +183,7 @@
 				1E6C373311DF553F00096C39 /* MainDetailViewController.m in Sources */,
 				1E6C374211DF579700096C39 /* MainRootViewController.m in Sources */,
 				1E5F451911DF8461000B750B /* MainSplitViewController.m in Sources */,
+				1E5F458511DF8D8B000B750B /* SettingsModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

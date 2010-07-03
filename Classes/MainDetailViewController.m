@@ -1,10 +1,12 @@
 #import "MainDetailViewController.h"
+#import	"SettingsModalViewController.h"
 
 
 @implementation MainDetailViewController
 
 @synthesize popoverController;
 @synthesize toolbar;
+@synthesize settingsModalViewController;
 
 - (void)loadView {
 	self.view = [[UIView alloc] init];
@@ -12,8 +14,18 @@
 	[self setTitle:@"DetailViews"];
 	self.toolbar = [[UIToolbar alloc] init];
 	[self.toolbar sizeToFit];
-	[self.toolbar setItems:[NSMutableArray arrayWithObjects:nil]];
+	[self.toolbar setItems:[NSMutableArray arrayWithObjects:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
+															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(show:)],
+															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
+															nil]];
 	[self.view addSubview:self.toolbar];
+}
+
+- (void)show:(id)sender  {
+	self.settingsModalViewController = [[SettingsModalViewController alloc] init];
+	UINavigationController *settingsNavigationViewController = [[UINavigationController alloc] initWithRootViewController:self.settingsModalViewController];
+	[settingsNavigationViewController setModalPresentationStyle:UIModalPresentationFormSheet];
+	[[self splitViewController] presentModalViewController:settingsNavigationViewController animated:YES];
 }
 
 
@@ -32,7 +44,7 @@
     NSMutableArray *items = [[toolbar items] mutableCopy];
     [items removeObjectAtIndex:0];
     [self.toolbar setItems:items animated:YES];
-    [items release];
+	[items release];
     self.popoverController = nil;
 }
 
@@ -58,6 +70,9 @@
 
 
 - (void)dealloc {
+	[settingsModalViewController release];
+	[toolbar release];
+	[popoverController release];
     [super dealloc];
 }
 
