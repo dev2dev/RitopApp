@@ -1,11 +1,3 @@
-    //
-//  SplashScreenViewController.m
-//  RitopApp
-//
-//  Created by Toni Suter on 02.07.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import "SplashScreenViewController.h"
 
 
@@ -13,21 +5,27 @@
 
 @synthesize rittmeyerLogo;
 
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	UIView *localView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
 	
-	self.rittmeyerLogo = [[UILabel alloc] initWithFrame:CGRectMake(259,472,250,80)];
+	self.rittmeyerLogo = [[UILabel alloc] initWithFrame:CGRectMake(1,1,250,80)];
 	[rittmeyerLogo setText:@"rittmeyer"];
 	[rittmeyerLogo setFont:[UIFont boldSystemFontOfSize:50.0]];
 	[rittmeyerLogo setTextAlignment:UITextAlignmentCenter];
 	[rittmeyerLogo setBackgroundColor:[UIColor clearColor]];
+	[rittmeyerLogo setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
 	[localView addSubview:rittmeyerLogo];
 	
 	[localView setBackgroundColor:[UIColor darkGrayColor]];
+	[localView setAutoresizesSubviews:YES];
+	
 	self.view = localView;
+
 	[localView release];
 }
+
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.

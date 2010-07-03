@@ -1,29 +1,51 @@
-//
-//  RitopAppAppDelegate.m
-//  RitopApp
-//
-//  Created by Toni Suter on 29.06.10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
-//
-
 #import "RitopAppAppDelegate.h"
 #import "SplashScreenViewController.h"
+#import "MainSplitViewController.h"
+#import "MainRootViewController.h"
+#import "MainDetailViewController.h"
+
 
 @implementation RitopAppAppDelegate
 
 @synthesize window;
 @synthesize splashScreenViewController;
+@synthesize mainSplitViewController;
+@synthesize mainRootViewController;
+@synthesize mainDetailViewController;
+@synthesize mainRootNavigationController;
+@synthesize splashScreenTimer;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	[window setBackgroundColor:[UIColor whiteColor]];
 	
 	self.splashScreenViewController = [[SplashScreenViewController alloc] init];
+	self.mainSplitViewController = [[MainSplitViewController alloc] init];
+	self.mainRootViewController = [[MainRootViewController alloc] init];
+	self.mainDetailViewController = [[MainDetailViewController alloc] init];
+	self.mainRootNavigationController = [[UINavigationController alloc] initWithRootViewController:self.mainRootViewController];
 	
-    [window addSubview:splashScreenViewController.view];
+	[self.mainSplitViewController setDelegate:self.mainDetailViewController];
+	[self.mainSplitViewController setViewControllers:[NSArray arrayWithObjects:self.mainRootNavigationController, self.mainDetailViewController, nil]];
+	[window addSubview:self.mainSplitViewController.view];
+    [window addSubview:self.splashScreenViewController.view];
     [window makeKeyAndVisible];
-
+	
+	self.splashScreenTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+													  target: self 
+													selector:@selector(dismissSplashScreen:) 
+													userInfo: nil 
+													 repeats: NO];
 	return YES;
+}
+
+
+- (void)dismissSplashScreen:(id)sender  {
+	[UIView beginAnimations:@"fadeOut" context:nil];
+	[UIView setAnimationDuration:1.0];
+	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+	[self.splashScreenViewController.view setAlpha:0.0];
+	[UIView commitAnimations];
 }
 
 
@@ -57,6 +79,11 @@
 
 
 - (void)dealloc {
+	[splashScreenTimer release];
+	[mainRootNavigationController release];
+	[mainDetailViewController release];
+	[mainRootViewController release];
+	[mainSplitViewController release];
     [splashScreenViewController release];
     [window release];
     [super dealloc];

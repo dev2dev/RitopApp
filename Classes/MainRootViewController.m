@@ -1,18 +1,17 @@
-#import "StyledTableViewController.h"
+#import "MainRootViewController.h"
 
 
-@implementation StyledTableViewController
+@implementation MainRootViewController
 
 @synthesize data;
-
 
 - (id)init {
 	self = [super init];
     if (self != nil) {
 		data = [[NSMutableArray alloc] initWithObjects:@"Datarow1", @"Datarow2", @"Datarow3", nil];
-		
-		self.tableView.dataSource = self;
-		self.tableView.delegate = self;
+		[[self tableView] setDataSource:self];		
+		[[self tableView] setDelegate:self];
+		[self setTitle:@"RootView"];
     }
     return self;
 }
@@ -37,7 +36,7 @@
 	{
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
 	}
-
+	
 	
 	[[cell textLabel] setText:[data objectAtIndex:indexPath.row]];
 	
@@ -86,11 +85,7 @@
  */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-		[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	UIViewController *detailViewController = [[UIViewController alloc] init];
-	[detailViewController setTitle:[data objectAtIndex:indexPath.row]];
-	[self.navigationController pushViewController:detailViewController animated:YES];
-	[detailViewController release];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
