@@ -3,14 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>R7VZBFBF97.com.codeinbrackets.ritopapp</string>
-	<key>aps-environment</key>
-	<string>development</string>
-	<key>get-task-allow</key>
-	<true/>
+	<string>$(AppIdentifierPrefix)$(CFBundleIdentifier)</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>R7VZBFBF97.com.codeinbrackets.ritopapp</string>
+		<string>$(AppIdentifierPrefix)$(CFBundleIdentifier)</string>
 	</array>
 </dict>
 </plist>

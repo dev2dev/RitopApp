@@ -15,7 +15,9 @@
 @synthesize mainRootNavigationController;
 @synthesize splashScreenTimer;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
+	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	[window setBackgroundColor:[UIColor whiteColor]];
 	
@@ -89,6 +91,30 @@
     [window release];
     [super dealloc];
 }
+
+
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application 
+{    
+	// ... existing code ...
+	
+	// pick which of the three notification types your app wants to receive
+
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+{
+	NSLog(@"%@", [[newDeviceToken description] description]);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+	NSLog(@"Error in registration. Error: %@", error);
+}
+
+
+
 
 
 @end
