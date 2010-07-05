@@ -6,23 +6,20 @@
 @synthesize rittmeyerLogo;
 
 - (void)loadView {
-	UIView *localView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
+	self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	[self.view setBackgroundColor:[UIColor darkGrayColor]];
+	[self.view setAutoresizesSubviews:YES];
+	[self.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 	
-	self.rittmeyerLogo = [[UILabel alloc] initWithFrame:CGRectMake(1,1,250,80)];
-	[rittmeyerLogo setText:@"rittmeyer"];
-	[rittmeyerLogo setFont:[UIFont boldSystemFontOfSize:50.0]];
-	[rittmeyerLogo setTextAlignment:UITextAlignmentCenter];
-	[rittmeyerLogo setBackgroundColor:[UIColor clearColor]];
-	[rittmeyerLogo setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
-	[localView addSubview:rittmeyerLogo];
-	
-	[localView setBackgroundColor:[UIColor darkGrayColor]];
-	[localView setAutoresizesSubviews:YES];
-	
-	self.view = localView;
-
-	[localView release];
+	self.rittmeyerLogo = [[UILabel alloc] initWithFrame:CGRectZero];
+	[self.rittmeyerLogo setText:@"rittmeyer"];
+	[self.rittmeyerLogo setFont:[UIFont boldSystemFontOfSize:50.0]];
+	[self.rittmeyerLogo setTextAlignment:UITextAlignmentCenter];
+	[self.rittmeyerLogo setBackgroundColor:[UIColor clearColor]];
+	[self.rittmeyerLogo setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
+	[self.rittmeyerLogo sizeToFit];
+	[self.rittmeyerLogo setCenter:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2)];
+	[self.view addSubview:self.rittmeyerLogo];
 }
 
 

@@ -1,5 +1,6 @@
 #import "MainDetailViewController.h"
 #import	"SettingsModalViewController.h"
+#import "DatapointViewController.h"
 
 
 @implementation MainDetailViewController
@@ -9,9 +10,10 @@
 @synthesize settingsModalViewController;
 
 - (void)loadView {
-	self.view = [[UIView alloc] init];
+	[super loadView];
 	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"pattern02.png"]]];
 	[self setTitle:@"DetailViews"];
+	
 	self.toolbar = [[UIToolbar alloc] init];
 	[self.toolbar setTintColor:[UIColor darkGrayColor]];
 	[self.toolbar sizeToFit];
@@ -20,7 +22,35 @@
 															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
 															nil]];
 	[self.view addSubview:self.toolbar];
+	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, 95.0)];
+	[scrollView setCenter:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-47.5)];
+	[scrollView setShowsHorizontalScrollIndicator:YES];
+	[scrollView setShowsVerticalScrollIndicator:NO];
+	[scrollView setContentSize:CGSizeMake(1005,74)];
+	[scrollView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth];
+	
+	DatapointViewController	*dp1 = [[DatapointViewController alloc] init];
+	[dp1.view setCenter:CGPointMake(80, 37)];
+	[scrollView addSubview:dp1.view];
+	DatapointViewController	*dp2 = [[DatapointViewController alloc] init];
+	[dp2.view setCenter:CGPointMake(250,37)];
+	[scrollView addSubview:dp2.view];
+	DatapointViewController	*dp3 = [[DatapointViewController alloc] init];
+	[dp3.view setCenter:CGPointMake(420,37)];
+	[scrollView addSubview:dp3.view];
+	DatapointViewController	*dp4 = [[DatapointViewController alloc] init];
+	[dp4.view setCenter:CGPointMake(590,37)];
+	[scrollView addSubview:dp4.view];
+	DatapointViewController	*dp5 = [[DatapointViewController alloc] init];
+	[dp5.view setCenter:CGPointMake(760,37)];
+	[scrollView addSubview:dp5.view];
+	DatapointViewController	*dp6 = [[DatapointViewController alloc] init];
+	[dp6.view setCenter:CGPointMake(930,37)];
+	[scrollView addSubview:dp6.view];
+
+	[self.view addSubview:scrollView];
 }
+
 
 - (void)showSettings:(id)sender  {
 	self.settingsModalViewController = [[SettingsModalViewController alloc] init];

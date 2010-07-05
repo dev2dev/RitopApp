@@ -16,7 +16,7 @@
 @synthesize splashScreenTimer;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
+	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	[window setBackgroundColor:[UIColor whiteColor]];
@@ -30,8 +30,11 @@
 	
 	[self.mainSplitViewController setDelegate:self.mainDetailViewController];
 	[self.mainSplitViewController setViewControllers:[NSArray arrayWithObjects:self.mainRootNavigationController, self.mainDetailViewController, nil]];
+	[self.mainSplitViewController.view setAlpha:0.0];
+	
 	[window addSubview:self.mainSplitViewController.view];
-    [window addSubview:self.splashScreenViewController.view];
+	[window addSubview:self.splashScreenViewController.view];
+	[window setAutoresizesSubviews:YES];
     [window makeKeyAndVisible];
 	
 	self.splashScreenTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -47,8 +50,20 @@
 	[UIView beginAnimations:@"fadeOut" context:nil];
 	[UIView setAnimationDuration:1.0];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDidStopSelector:@selector(animateOtherStuff:finished:context:)];
 	[self.splashScreenViewController.view setAlpha:0.0];
+	[self.mainSplitViewController.view setAlpha:1.0];
 	[UIView commitAnimations];
+}
+
+- (void)animateOtherStuff:(NSString*) animationID finished:
+(NSNumber*) finished context:(void*) context 
+{
+    if ([animationID isEqualToString:@"fadeOut"])
+    {
+		[self.splashScreenViewController.view removeFromSuperview];
+    }  
 }
 
 
@@ -92,15 +107,18 @@
     [super dealloc];
 }
 
-
-
-- (void)applicationDidFinishLaunching:(UIApplication *)application 
-{    
-	// ... existing code ...
-	
-	// pick which of the three notification types your app wants to receive
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	[self.splashScreenViewController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
 
 }
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
+{
+	[self.splashScreenViewController willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
+}
+
+
 
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
