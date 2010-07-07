@@ -18,8 +18,8 @@
 	[self.toolbar setTintColor:[UIColor darkGrayColor]];
 	[self.toolbar sizeToFit];
 	[self.toolbar setItems:[NSMutableArray arrayWithObjects:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
-															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(showSettings:)],
-															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
+															[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settingsIcon.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings:)],
+															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:self action:nil],
 															nil]];
 	[self.view addSubview:self.toolbar];
 	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, 95.0)];
@@ -73,10 +73,14 @@
 
 // Called when the view is shown again in the split view, invalidating the button and popover controller.
 - (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
-    NSMutableArray *items = [[toolbar items] mutableCopy];
-    [items removeObjectAtIndex:0];
-    [self.toolbar setItems:items animated:YES];
-	[items release];
+//    NSMutableArray *items = [[toolbar items] mutableCopy];
+//    [items removeObjectAtIndex:0];
+//    [self.toolbar setItems:items animated:YES];
+	[self.toolbar setItems:[NSMutableArray arrayWithObjects:
+							[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settingsIcon.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings:)],
+							[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:self action:nil],
+							nil]];
+	//[items release];
     self.popoverController = nil;
 }
 

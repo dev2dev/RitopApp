@@ -1,8 +1,7 @@
-#import "MainRootViewController.h"
 #import "InstallationDetailViewController.h"
 
 
-@implementation MainRootViewController
+@implementation InstallationDetailViewController
 
 @synthesize data;
 
@@ -10,17 +9,14 @@
 	self = [super init];
     if (self != nil) {
 		data = [[NSMutableArray alloc] initWithObjects:[NSMutableArray arrayWithObjects:[UIImage imageNamed:@"imageA.png"], 
-																						[UIImage imageNamed:@"imageB.png"], 
-																						[UIImage imageNamed:@"imageC.png"],
-																						[UIImage imageNamed:@"imageA.png"], 
-																						[UIImage imageNamed:@"imageB.png"], 
-																						[UIImage imageNamed:@"imageC.png"],nil],
-													   [NSMutableArray arrayWithObjects:@"Anlage 1", @"Anlage 2", @"Anlage 3",@"Anlage 4",@"Anlage 5",@"Anlage 6", nil],
-													   [NSMutableArray arrayWithObjects:@"Beinwil Freiamt", @"Schule", @"Gemeindehaus", @"Zug", @"Muri", @"Buttwil", nil],
-													   nil];
+														[UIImage imageNamed:@"imageB.png"], 
+														[UIImage imageNamed:@"imageC.png"],nil],
+				[NSMutableArray arrayWithObjects:@"Ventil V1", @"Ventil V2", @"Ventil V3", nil],
+				[NSMutableArray arrayWithObjects:@"", @"", @"", nil],
+				[NSMutableArray arrayWithObjects:[NSNumber numberWithBool:NO], [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO],nil],
+				nil];
 		[self.tableView setDataSource:self];		
 		[self.tableView setDelegate:self];
-		[self setTitle:@"Anlagen"];
     }
     return self;
 }
@@ -52,16 +48,15 @@
 	if (cell == nil)
 	{
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		UIImage *indicatorImage = [UIImage imageNamed:@"indicator.png"];
-		cell.accessoryView = [[[UIImageView alloc] initWithImage:indicatorImage] autorelease];
 		
 		UIImage *image = [UIImage imageNamed:@"imageA.png"];
+		UIImage *indicator = [UIImage imageNamed:@"greenBullet.png"];
 		
 		//topLabel
 		topLabel = [[[UILabel alloc] initWithFrame:CGRectMake(image.size.width + 2.0 * cell.indentationWidth,
-					 0.5 * (aTableView.rowHeight - 2 * 20),
-					 aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicatorImage.size.width,
-					 20)] autorelease];
+															  0.5 * (aTableView.rowHeight - 2 * 20),
+															  aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicator.size.width,
+															  20)] autorelease];
 		topLabel.tag = TOP_LABEL_TAG;
 		topLabel.backgroundColor = [UIColor clearColor];
 		topLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
@@ -71,9 +66,9 @@
 		
 		//bottomLabel
 		bottomLabel = [[[UILabel alloc] initWithFrame:CGRectMake(image.size.width + 2.0 * cell.indentationWidth,
-					 0.5 * (aTableView.rowHeight - 2 * 20) + 20,
-					 aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicatorImage.size.width,
-					 20)] autorelease];
+																 0.5 * (aTableView.rowHeight - 2 * 20) + 20,
+																 aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicator.size.width,
+																 20)] autorelease];
 		bottomLabel.tag = BOTTOM_LABEL_TAG;
 		bottomLabel.backgroundColor = [UIColor clearColor];
 		bottomLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
@@ -85,21 +80,32 @@
 		cell.selectedBackgroundView = [[[UIImageView alloc] init] autorelease];
 	}
 	
-
+	
 	else
 	{
 		topLabel = (UILabel *)[cell viewWithTag:TOP_LABEL_TAG];
 		bottomLabel = (UILabel *)[cell viewWithTag:BOTTOM_LABEL_TAG];
 	}
 	
+	
+	UIImage *indicatorImage;
+	
+	if ([[[data objectAtIndex:3] objectAtIndex:[indexPath row]] boolValue] == YES) {
+		indicatorImage = [UIImage imageNamed:@"redBullet.png"];
+	}
+	else {
+		indicatorImage = [UIImage imageNamed:@"greenBullet.png"];		
+	}
+	cell.accessoryView = [[[UIImageView alloc] initWithImage:indicatorImage] autorelease];
+	
 	topLabel.text = [[data objectAtIndex:1] objectAtIndex:[indexPath row]];
 	bottomLabel.text = [[data objectAtIndex:2] objectAtIndex:[indexPath row]];
-
+	
 	((UIImageView *)cell.backgroundView).image = [UIImage imageNamed:@"unselectedRow.png"];
 	((UIImageView *)cell.selectedBackgroundView).image = [UIImage imageNamed:@"selectedRow.png"];
 	
 	[[cell imageView] setImage:[[data objectAtIndex:0] objectAtIndex:[indexPath row]]];
-
+	
 	return cell;
 	
 }
@@ -145,12 +151,6 @@
  */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	InstallationDetailViewController *detailView = [[InstallationDetailViewController alloc] init];
-	[detailView setTitle:[[self.data objectAtIndex:1] objectAtIndex:[indexPath row]]];
-	[detailView.view setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-	[[self navigationController] pushViewController:detailView animated:YES];
-	[detailView release];
 }
 
 - (void)didReceiveMemoryWarning {

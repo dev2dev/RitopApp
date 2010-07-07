@@ -24,6 +24,10 @@
 		1E7A0CE911E08C7A006C77B1 /* pattern02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7A0CE111E08C7A006C77B1 /* pattern02.png */; };
 		1E7A0CEA11E08C7A006C77B1 /* selectedRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7A0CE211E08C7A006C77B1 /* selectedRow.png */; };
 		1E7A0CEB11E08C7A006C77B1 /* unselectedRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E7A0CE311E08C7A006C77B1 /* unselectedRow.png */; };
+		1E8B194611E51C520096101A /* InstallationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B194511E51C520096101A /* InstallationDetailViewController.m */; };
+		1E8B197111E51F170096101A /* greenBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8B196F11E51F170096101A /* greenBullet.png */; };
+		1E8B197211E51F170096101A /* redBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8B197011E51F170096101A /* redBullet.png */; };
+		1E8B199B11E522BC0096101A /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8B199A11E522BC0096101A /* settingsIcon.png */; };
 		1E8CBBF211E11DCC000F62BC /* DatapointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8CBBF111E11DCC000F62BC /* DatapointViewController.m */; };
 		1E8CBBF411E11E99000F62BC /* datapoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8CBBF311E11E99000F62BC /* datapoint.png */; };
 		1E8CBE6011E26AF0000F62BC /* untitled.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8CBE5F11E26AF0000F62BC /* untitled.m */; };
@@ -55,6 +59,11 @@
 		1E7A0CE111E08C7A006C77B1 /* pattern02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern02.png; sourceTree = "<group>"; };
 		1E7A0CE211E08C7A006C77B1 /* selectedRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedRow.png; sourceTree = "<group>"; };
 		1E7A0CE311E08C7A006C77B1 /* unselectedRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unselectedRow.png; sourceTree = "<group>"; };
+		1E8B194411E51C520096101A /* InstallationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallationDetailViewController.h; sourceTree = "<group>"; };
+		1E8B194511E51C520096101A /* InstallationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallationDetailViewController.m; sourceTree = "<group>"; };
+		1E8B196F11E51F170096101A /* greenBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenBullet.png; sourceTree = "<group>"; };
+		1E8B197011E51F170096101A /* redBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redBullet.png; sourceTree = "<group>"; };
+		1E8B199A11E522BC0096101A /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
 		1E8CBBF011E11DCC000F62BC /* DatapointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatapointViewController.h; sourceTree = "<group>"; };
 		1E8CBBF111E11DCC000F62BC /* DatapointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatapointViewController.m; sourceTree = "<group>"; };
 		1E8CBBF311E11E99000F62BC /* datapoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datapoint.png; sourceTree = "<group>"; };
@@ -97,6 +106,8 @@
 				1E5F458411DF8D8B000B750B /* SettingsModalViewController.m */,
 				1E8CBBF011E11DCC000F62BC /* DatapointViewController.h */,
 				1E8CBBF111E11DCC000F62BC /* DatapointViewController.m */,
+				1E8B194411E51C520096101A /* InstallationDetailViewController.h */,
+				1E8B194511E51C520096101A /* InstallationDetailViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -135,6 +146,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E8B199A11E522BC0096101A /* settingsIcon.png */,
+				1E8B196F11E51F170096101A /* greenBullet.png */,
+				1E8B197011E51F170096101A /* redBullet.png */,
 				1E8CBBF311E11E99000F62BC /* datapoint.png */,
 				1E7A0CDC11E08C7A006C77B1 /* imageA.png */,
 				1E7A0CDD11E08C7A006C77B1 /* imageB.png */,
@@ -211,6 +225,9 @@
 				1E7A0CEA11E08C7A006C77B1 /* selectedRow.png in Resources */,
 				1E7A0CEB11E08C7A006C77B1 /* unselectedRow.png in Resources */,
 				1E8CBBF411E11E99000F62BC /* datapoint.png in Resources */,
+				1E8B197111E51F170096101A /* greenBullet.png in Resources */,
+				1E8B197211E51F170096101A /* redBullet.png in Resources */,
+				1E8B199B11E522BC0096101A /* settingsIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +247,7 @@
 				1E5F458511DF8D8B000B750B /* SettingsModalViewController.m in Sources */,
 				1E8CBBF211E11DCC000F62BC /* DatapointViewController.m in Sources */,
 				1E8CBE6011E26AF0000F62BC /* untitled.m in Sources */,
+				1E8B194611E51C520096101A /* InstallationDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
