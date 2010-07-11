@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -277,8 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
-									<integer>19</integer>
+									<integer>5</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -311,12 +309,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1E4FAB4011DA7F2C00819765</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>pattern.png</string>
+								<string>MainDetailViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1E4FAB4111DA7F2C00819765</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>pattern.png</string>
+										<string>MainDetailViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1EB506F511E9FE370047F0D8</string>
+										<string>1EB5084F11EA14E90047F0D8</string>
 										<key>history</key>
 										<array>
 											<string>1E69C2EA11DDA3E3000F2A77</string>
@@ -340,15 +340,8 @@
 											<string>1ED8FFCA11E674BA00D5EBF8</string>
 											<string>1ED8005111E896FD00D5EBF8</string>
 											<string>1ED8013611E8BA3500D5EBF8</string>
-											<string>1ED8017111E8BF9E00D5EBF8</string>
-											<string>1ED8020911E8D01000D5EBF8</string>
-											<string>1ED8021B11E8D06400D5EBF8</string>
 											<string>1ED8023111E8D0F800D5EBF8</string>
-											<string>1ED8023411E8D0F800D5EBF8</string>
-											<string>1ED8023F11E8D99100D5EBF8</string>
 											<string>1ED8024111E8D99100D5EBF8</string>
-											<string>1ED8024211E8D99100D5EBF8</string>
-											<string>1ED8028111E8DE8B00D5EBF8</string>
 											<string>1ED8028211E8DE8B00D5EBF8</string>
 											<string>1EB506DD11E9FDE80047F0D8</string>
 											<string>1EB506DE11E9FDE80047F0D8</string>
@@ -360,7 +353,16 @@
 											<string>1EB506E411E9FDE80047F0D8</string>
 											<string>1EB506E511E9FDE80047F0D8</string>
 											<string>1EB506E611E9FDE80047F0D8</string>
-											<string>1EB506F411E9FE350047F0D8</string>
+											<string>1EB506FB11EA017C0047F0D8</string>
+											<string>1EB506FE11EA017C0047F0D8</string>
+											<string>1EB5077211EA07540047F0D8</string>
+											<string>1EB5080011EA0DF20047F0D8</string>
+											<string>1EB5080111EA0DF20047F0D8</string>
+											<string>1EB5081811EA12460047F0D8</string>
+											<string>1EB5081A11EA12460047F0D8</string>
+											<string>1EB5084811EA14850047F0D8</string>
+											<string>1EB5084911EA14850047F0D8</string>
+											<string>1EB5084E11EA14D90047F0D8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -400,8 +402,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1650, 197}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 128 1920 1050 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -455,7 +455,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1650, 192}}</string>
+										<string>{{10, 27}, {1650, 197}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 128 1920 1050 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -677,6 +679,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1EB507CF11EA0CA10047F0D8</string>
+		<string>1EB507C811EA0C8A0047F0D8</string>
 		<string>/Users/tonisuter/RitopApp/RitopApp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

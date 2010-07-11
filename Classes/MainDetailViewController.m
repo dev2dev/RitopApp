@@ -1,11 +1,13 @@
 #import "MainDetailViewController.h"
 #import "DatapointViewController.h"
+#import "BasicChartView.h"
 
 
 @implementation MainDetailViewController
 
 @synthesize popoverController;
 @synthesize toolbar;
+@synthesize basicChartView;
 
 - (void)loadView {
 	[super loadView];
@@ -45,6 +47,12 @@
 	[scrollView addSubview:dp6.view];
 
 	[self.view addSubview:scrollView];
+	
+	
+	self.basicChartView = [[BasicChartView alloc] initWithFrame:CGRectMake(0,0,500,350)];
+	[basicChartView setCenter:CGPointMake(self.view.frame.size.width/2, 350)];
+	[basicChartView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
+	[self.view addSubview:basicChartView];
 }
 
 

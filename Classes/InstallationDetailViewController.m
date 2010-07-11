@@ -94,6 +94,42 @@
  */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	if(indexPath.row == 0)  {
+		[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setData:[NSMutableArray arrayWithObjects:
+																														 [NSNumber numberWithFloat:25],
+																														 [NSNumber numberWithFloat:77],
+																														 [NSNumber numberWithFloat:34],
+																														 [NSNumber numberWithFloat:11],
+																														 [NSNumber numberWithFloat:14],
+																														 [NSNumber numberWithFloat:19],
+																														 [NSNumber numberWithFloat:99],
+																														 nil]];
+	}
+	else if(indexPath.row == 1)  {
+		[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setData:[NSMutableArray arrayWithObjects:
+																														 [NSNumber numberWithFloat:100],
+																														 [NSNumber numberWithFloat:20],
+																														 [NSNumber numberWithFloat:70],
+																														 [NSNumber numberWithFloat:119],
+																														 [NSNumber numberWithFloat:90],
+																														 [NSNumber numberWithFloat:30],
+																														 [NSNumber numberWithFloat:45],
+																														 nil]];
+	}
+	else if(indexPath.row == 2)  {
+		[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setData:[NSMutableArray arrayWithObjects:
+																														 [NSNumber numberWithFloat:77],
+																														 [NSNumber numberWithFloat:99],
+																														 [NSNumber numberWithFloat:44],
+																														 [NSNumber numberWithFloat:33],
+																														 [NSNumber numberWithFloat:33],
+																														 [NSNumber numberWithFloat:33],
+																														 [NSNumber numberWithFloat:99],
+																														 nil]];
+	}
+
+	[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setNeedsDisplay];
+
 }
 
 - (void)didReceiveMemoryWarning {
