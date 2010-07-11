@@ -1,5 +1,4 @@
 #import "MainDetailViewController.h"
-#import	"SettingsModalViewController.h"
 #import "DatapointViewController.h"
 
 
@@ -7,20 +6,17 @@
 
 @synthesize popoverController;
 @synthesize toolbar;
-@synthesize settingsModalViewController;
 
 - (void)loadView {
 	[super loadView];
-	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"pattern02.png"]]];
+	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"pattern.png"]]];
 	[self setTitle:@"DetailViews"];
 	
 	self.toolbar = [[UIToolbar alloc] init];
 	[self.toolbar setTintColor:[UIColor darkGrayColor]];
+	[self.toolbar setTintColor:[UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1.0]];
 	[self.toolbar sizeToFit];
-	[self.toolbar setItems:[NSMutableArray arrayWithObjects:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
-															[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settingsIcon.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings:)],
-															[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:self action:nil],
-															nil]];
+	[self.toolbar setItems:[NSMutableArray arrayWithObjects:nil]];
 	[self.view addSubview:self.toolbar];
 	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, 95.0)];
 	[scrollView setCenter:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-47.5)];
@@ -52,13 +48,7 @@
 }
 
 
-- (void)showSettings:(id)sender  {
-	self.settingsModalViewController = [[SettingsModalViewController alloc] init];
-	UINavigationController *settingsNavigationViewController = [[UINavigationController alloc] initWithRootViewController:self.settingsModalViewController];
-	[[settingsNavigationViewController navigationBar] setTintColor:[UIColor darkGrayColor]];
-	[settingsNavigationViewController setModalPresentationStyle:UIModalPresentationFormSheet];
-	[[self splitViewController] presentModalViewController:settingsNavigationViewController animated:YES];
-}
+
 
 
 - (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
@@ -73,14 +63,10 @@
 
 // Called when the view is shown again in the split view, invalidating the button and popover controller.
 - (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
-//    NSMutableArray *items = [[toolbar items] mutableCopy];
-//    [items removeObjectAtIndex:0];
-//    [self.toolbar setItems:items animated:YES];
-	[self.toolbar setItems:[NSMutableArray arrayWithObjects:
-							[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settingsIcon.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings:)],
-							[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:self action:nil],
-							nil]];
-	//[items release];
+    NSMutableArray *items = [[toolbar items] mutableCopy];
+    [items removeObjectAtIndex:0];
+    [self.toolbar setItems:items animated:YES];
+	[items release];
     self.popoverController = nil;
 }
 
@@ -106,7 +92,6 @@
 
 
 - (void)dealloc {
-	[settingsModalViewController release];
 	[toolbar release];
 	[popoverController release];
     [super dealloc];

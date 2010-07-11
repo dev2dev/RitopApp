@@ -1,5 +1,4 @@
 #import "RitopAppAppDelegate.h"
-#import "SplashScreenViewController.h"
 #import "MainSplitViewController.h"
 #import "MainRootViewController.h"
 #import "MainDetailViewController.h"
@@ -8,62 +7,30 @@
 @implementation RitopAppAppDelegate
 
 @synthesize window;
-@synthesize splashScreenViewController;
 @synthesize mainSplitViewController;
 @synthesize mainRootViewController;
 @synthesize mainDetailViewController;
 @synthesize mainRootNavigationController;
-@synthesize splashScreenTimer;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	[window setBackgroundColor:[UIColor whiteColor]];
 	
-	self.splashScreenViewController = [[SplashScreenViewController alloc] init];
 	self.mainSplitViewController = [[MainSplitViewController alloc] init];
 	self.mainRootViewController = [[MainRootViewController alloc] init];
 	self.mainDetailViewController = [[MainDetailViewController alloc] init];
 	self.mainRootNavigationController = [[UINavigationController alloc] initWithRootViewController:self.mainRootViewController];
-	[[self.mainRootNavigationController navigationBar] setTintColor:[UIColor darkGrayColor]];
+	[[self.mainRootNavigationController navigationBar] setTintColor:[UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1.0]];
+	
 	
 	[self.mainSplitViewController setDelegate:self.mainDetailViewController];
 	[self.mainSplitViewController setViewControllers:[NSArray arrayWithObjects:self.mainRootNavigationController, self.mainDetailViewController, nil]];
-	[self.mainSplitViewController.view setAlpha:0.0];
 	
 	[window addSubview:self.mainSplitViewController.view];
-	[window addSubview:self.splashScreenViewController.view];
 	[window setAutoresizesSubviews:YES];
     [window makeKeyAndVisible];
-	
-	self.splashScreenTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-													  target: self 
-													selector:@selector(dismissSplashScreen:) 
-													userInfo: nil 
-													 repeats: NO];
 	return YES;
-}
-
-
-- (void)dismissSplashScreen:(id)sender  {
-	[UIView beginAnimations:@"fadeOut" context:nil];
-	[UIView setAnimationDuration:1.0];
-	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-	[UIView setAnimationDelegate:self];
-	[UIView setAnimationDidStopSelector:@selector(animateOtherStuff:finished:context:)];
-	[self.splashScreenViewController.view setAlpha:0.0];
-	[self.mainSplitViewController.view setAlpha:1.0];
-	[UIView commitAnimations];
-}
-
-- (void)animateOtherStuff:(NSString*) animationID finished:
-(NSNumber*) finished context:(void*) context 
-{
-    if ([animationID isEqualToString:@"fadeOut"])
-    {
-		[self.splashScreenViewController.view removeFromSuperview];
-    }  
 }
 
 
@@ -97,28 +64,13 @@
 
 
 - (void)dealloc {
-	[splashScreenTimer release];
 	[mainRootNavigationController release];
 	[mainDetailViewController release];
 	[mainRootViewController release];
 	[mainSplitViewController release];
-    [splashScreenViewController release];
     [window release];
     [super dealloc];
 }
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-	[self.splashScreenViewController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
-{
-	[self.splashScreenViewController willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
-}
-
-
 
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken

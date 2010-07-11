@@ -9,9 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SettingsModalViewController : UIViewController {
-
+@interface SettingsModalViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+	UITableView *rootTableView;
+	NSMutableArray *rootTableData;
+	UIView *detailView;
 }
+
+@property(nonatomic, retain)UITableView *rootTableView;
+@property(nonatomic, retain)NSMutableArray *rootTableData;
+@property(nonatomic, retain)UIView *detailView;
 
 - (void)settingsDone:(id)sender;
 

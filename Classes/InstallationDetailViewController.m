@@ -12,7 +12,6 @@
 														[UIImage imageNamed:@"imageB.png"], 
 														[UIImage imageNamed:@"imageC.png"],nil],
 				[NSMutableArray arrayWithObjects:@"Ventil V1", @"Ventil V2", @"Ventil V3", nil],
-				[NSMutableArray arrayWithObjects:@"", @"", @"", nil],
 				[NSMutableArray arrayWithObjects:[NSNumber numberWithBool:NO], [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO],nil],
 				nil];
 		[self.tableView setDataSource:self];		
@@ -24,9 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-	[self.tableView setRowHeight:100.0];
-	[self.tableView setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
+	[self.tableView setRowHeight:80.0];
+	[self.tableView setBackgroundColor:[UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]];
+	[self.tableView setSeparatorColor:[UIColor colorWithRed:0.27 green:0.27 blue:0.27 alpha:1.0]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -38,76 +37,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	const NSInteger TOP_LABEL_TAG = 1001;
-	const NSInteger BOTTOM_LABEL_TAG = 1002;
-	UILabel *topLabel;
-	UILabel *bottomLabel;
-	
 	static NSString *CellIdentifier = @"Cell";
-	UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	if (cell == nil)
-	{
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		
-		UIImage *image = [UIImage imageNamed:@"imageA.png"];
-		UIImage *indicator = [UIImage imageNamed:@"greenBullet.png"];
-		
-		//topLabel
-		topLabel = [[[UILabel alloc] initWithFrame:CGRectMake(image.size.width + 2.0 * cell.indentationWidth,
-															  0.5 * (aTableView.rowHeight - 2 * 20),
-															  aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicator.size.width,
-															  20)] autorelease];
-		topLabel.tag = TOP_LABEL_TAG;
-		topLabel.backgroundColor = [UIColor clearColor];
-		topLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
-		topLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
-		topLabel.font = [UIFont boldSystemFontOfSize:[UIFont labelFontSize]];
-		[cell.contentView addSubview:topLabel];
-		
-		//bottomLabel
-		bottomLabel = [[[UILabel alloc] initWithFrame:CGRectMake(image.size.width + 2.0 * cell.indentationWidth,
-																 0.5 * (aTableView.rowHeight - 2 * 20) + 20,
-																 aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicator.size.width,
-																 20)] autorelease];
-		bottomLabel.tag = BOTTOM_LABEL_TAG;
-		bottomLabel.backgroundColor = [UIColor clearColor];
-		bottomLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
-		bottomLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
-		bottomLabel.font = [UIFont systemFontOfSize:[UIFont labelFontSize] - 2];
-		[cell.contentView addSubview:bottomLabel];
-		
-		cell.backgroundView = [[[UIImageView alloc] init] autorelease];
-		cell.selectedBackgroundView = [[[UIImageView alloc] init] autorelease];
+	
+	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 	}
 	
-	
-	else
-	{
-		topLabel = (UILabel *)[cell viewWithTag:TOP_LABEL_TAG];
-		bottomLabel = (UILabel *)[cell viewWithTag:BOTTOM_LABEL_TAG];
-	}
-	
-	
-	UIImage *indicatorImage;
-	
-	if ([[[data objectAtIndex:3] objectAtIndex:[indexPath row]] boolValue] == YES) {
-		indicatorImage = [UIImage imageNamed:@"redBullet.png"];
-	}
-	else {
-		indicatorImage = [UIImage imageNamed:@"greenBullet.png"];		
-	}
-	cell.accessoryView = [[[UIImageView alloc] initWithImage:indicatorImage] autorelease];
-	
-	topLabel.text = [[data objectAtIndex:1] objectAtIndex:[indexPath row]];
-	bottomLabel.text = [[data objectAtIndex:2] objectAtIndex:[indexPath row]];
-	
-	((UIImageView *)cell.backgroundView).image = [UIImage imageNamed:@"unselectedRow.png"];
-	((UIImageView *)cell.selectedBackgroundView).image = [UIImage imageNamed:@"selectedRow.png"];
-	
-	[[cell imageView] setImage:[[data objectAtIndex:0] objectAtIndex:[indexPath row]]];
+	[[cell textLabel] setText:[[self.data objectAtIndex:1] objectAtIndex:[indexPath row]]];
+	[[cell textLabel] setTextColor:[UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1.0]];
+	[[cell textLabel] setHighlightedTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
+	[[cell imageView] setImage:[[self.data objectAtIndex:0] objectAtIndex:[indexPath row]]];
+	[cell setSelectionStyle:UITableViewCellSelectionStyleGray];
 	
 	return cell;
-	
 }
 
 

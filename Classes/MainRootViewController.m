@@ -1,10 +1,14 @@
 #import "MainRootViewController.h"
 #import "InstallationDetailViewController.h"
+#import "SettingsModalViewController.h"
 
 
 @implementation MainRootViewController
 
 @synthesize data;
+@synthesize settingsModalViewController;
+@synthesize settingsNavigationController;
+@synthesize refreshingTimer;
 
 - (id)init {
 	self = [super init];
@@ -16,22 +20,49 @@
 																						[UIImage imageNamed:@"imageB.png"], 
 																						[UIImage imageNamed:@"imageC.png"],nil],
 													   [NSMutableArray arrayWithObjects:@"Anlage 1", @"Anlage 2", @"Anlage 3",@"Anlage 4",@"Anlage 5",@"Anlage 6", nil],
-													   [NSMutableArray arrayWithObjects:@"Beinwil Freiamt", @"Schule", @"Gemeindehaus", @"Zug", @"Muri", @"Buttwil", nil],
 													   nil];
 		[self.tableView setDataSource:self];		
 		[self.tableView setDelegate:self];
 		[self setTitle:@"Anlagen"];
-    }
+		[[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settingsIcon.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings:)]];
+		[[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTable:)]];
+		
+		self.settingsModalViewController = [[SettingsModalViewController alloc] init];
+		self.settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.settingsModalViewController];
+		[[settingsNavigationController navigationBar] setTintColor:[UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1.0]];
+		[settingsNavigationController setModalPresentationStyle:UIModalPresentationFormSheet];
+	}
     return self;
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-	[self.tableView setRowHeight:100.0];
-	[self.tableView setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
+	[self.tableView setRowHeight:80.0];
+	[self.tableView setBackgroundColor:[UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]];
+	[self.tableView setSeparatorColor:[UIColor colorWithRed:0.27 green:0.27 blue:0.27 alpha:1.0]];
 }
+
+
+- (void)showSettings:(id)sender  {
+	[[self splitViewController] presentModalViewController:settingsNavigationController animated:YES];
+}
+
+- (void)refreshTable:(id)sender  {
+	UIActivityIndicatorView *refreshIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+	[refreshIndicator startAnimating];
+	[[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:refreshIndicator]];
+	self.refreshingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 
+															target:self 
+														  selector:@selector(refreshingDidEnd:) 
+														  userInfo:nil 
+														   repeats:NO];
+}
+
+- (void)refreshingDidEnd:(id)sender  {
+	[[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTable:)]];
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
@@ -42,66 +73,21 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	const NSInteger TOP_LABEL_TAG = 1001;
-	const NSInteger BOTTOM_LABEL_TAG = 1002;
-	UILabel *topLabel;
-	UILabel *bottomLabel;
-	
 	static NSString *CellIdentifier = @"Cell";
-	UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	if (cell == nil)
-	{
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		UIImage *indicatorImage = [UIImage imageNamed:@"indicator.png"];
-		cell.accessoryView = [[[UIImageView alloc] initWithImage:indicatorImage] autorelease];
-		
-		UIImage *image = [UIImage imageNamed:@"imageA.png"];
-		
-		//topLabel
-		topLabel = [[[UILabel alloc] initWithFrame:CGRectMake(image.size.width + 2.0 * cell.indentationWidth,
-					 0.5 * (aTableView.rowHeight - 2 * 20),
-					 aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicatorImage.size.width,
-					 20)] autorelease];
-		topLabel.tag = TOP_LABEL_TAG;
-		topLabel.backgroundColor = [UIColor clearColor];
-		topLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
-		topLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
-		topLabel.font = [UIFont boldSystemFontOfSize:[UIFont labelFontSize]];
-		[cell.contentView addSubview:topLabel];
-		
-		//bottomLabel
-		bottomLabel = [[[UILabel alloc] initWithFrame:CGRectMake(image.size.width + 2.0 * cell.indentationWidth,
-					 0.5 * (aTableView.rowHeight - 2 * 20) + 20,
-					 aTableView.bounds.size.width - image.size.width - 4.0 * cell.indentationWidth - indicatorImage.size.width,
-					 20)] autorelease];
-		bottomLabel.tag = BOTTOM_LABEL_TAG;
-		bottomLabel.backgroundColor = [UIColor clearColor];
-		bottomLabel.textColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
-		bottomLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
-		bottomLabel.font = [UIFont systemFontOfSize:[UIFont labelFontSize] - 2];
-		[cell.contentView addSubview:bottomLabel];
-		
-		cell.backgroundView = [[[UIImageView alloc] init] autorelease];
-		cell.selectedBackgroundView = [[[UIImageView alloc] init] autorelease];
+	
+	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 	}
 	
-
-	else
-	{
-		topLabel = (UILabel *)[cell viewWithTag:TOP_LABEL_TAG];
-		bottomLabel = (UILabel *)[cell viewWithTag:BOTTOM_LABEL_TAG];
-	}
+	[[cell textLabel] setText:[[self.data objectAtIndex:1] objectAtIndex:[indexPath row]]];
+	[[cell textLabel] setTextColor:[UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1.0]];
+	[[cell textLabel] setHighlightedTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
+	[[cell imageView] setImage:[[self.data objectAtIndex:0] objectAtIndex:[indexPath row]]];
+	[cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+	[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 	
-	topLabel.text = [[data objectAtIndex:1] objectAtIndex:[indexPath row]];
-	bottomLabel.text = [[data objectAtIndex:2] objectAtIndex:[indexPath row]];
-
-	((UIImageView *)cell.backgroundView).image = [UIImage imageNamed:@"unselectedRow.png"];
-	((UIImageView *)cell.selectedBackgroundView).image = [UIImage imageNamed:@"selectedRow.png"];
-	
-	[[cell imageView] setImage:[[data objectAtIndex:0] objectAtIndex:[indexPath row]]];
-
 	return cell;
-	
 }
 
 
@@ -145,11 +131,13 @@
  */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	InstallationDetailViewController *detailView = [[InstallationDetailViewController alloc] init];
 	[detailView setTitle:[[self.data objectAtIndex:1] objectAtIndex:[indexPath row]]];
-	[detailView.view setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
 	[[self navigationController] pushViewController:detailView animated:YES];
+	[detailView.tableView reloadData];
+	[detailView.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] 
+								animated:NO 
+						  scrollPosition:UITableViewScrollPositionTop];
 	[detailView release];
 }
 
