@@ -275,7 +275,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>11</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -316,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1E4FAB4011DA7F2C00819765</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MainDetailViewController.m</string>
+								<string>SettingsModalViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,26 +324,23 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1E4FAB4111DA7F2C00819765</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MainDetailViewController.m</string>
+										<string>SettingsModalViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1EB5084F11EA14E90047F0D8</string>
+										<string>1EB5089D11EA1D3D0047F0D8</string>
 										<key>history</key>
 										<array>
 											<string>1E69C2EA11DDA3E3000F2A77</string>
 											<string>1E7A0D1611E09044006C77B1</string>
-											<string>1E8CBBCD11E09135000F62BC</string>
 											<string>1E8CBE2C11E268AB000F62BC</string>
 											<string>1E8CBE2E11E268AB000F62BC</string>
 											<string>1E8CBEE511E27737000F62BC</string>
 											<string>1ED8FFCA11E674BA00D5EBF8</string>
-											<string>1ED8005111E896FD00D5EBF8</string>
 											<string>1ED8013611E8BA3500D5EBF8</string>
 											<string>1ED8023111E8D0F800D5EBF8</string>
 											<string>1ED8024111E8D99100D5EBF8</string>
 											<string>1ED8028211E8DE8B00D5EBF8</string>
-											<string>1EB506DD11E9FDE80047F0D8</string>
 											<string>1EB506DE11E9FDE80047F0D8</string>
 											<string>1EB506DF11E9FDE80047F0D8</string>
 											<string>1EB506E011E9FDE80047F0D8</string>
@@ -362,7 +359,11 @@
 											<string>1EB5081A11EA12460047F0D8</string>
 											<string>1EB5084811EA14850047F0D8</string>
 											<string>1EB5084911EA14850047F0D8</string>
-											<string>1EB5084E11EA14D90047F0D8</string>
+											<string>1EB5085B11EA1AE10047F0D8</string>
+											<string>1EB5085C11EA1AE10047F0D8</string>
+											<string>1EB5086711EA1B4F0047F0D8</string>
+											<string>1EB5086811EA1B4F0047F0D8</string>
+											<string>1EB5089C11EA1D3A0047F0D8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

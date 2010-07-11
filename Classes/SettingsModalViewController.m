@@ -140,6 +140,11 @@
 	[self.view addSubview:self.detailView];
 
 	if([indexPath row] == 3)  {
+		UIImageView *icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon.png"]];
+		[icon setFrame:CGRectMake(0,0,40,40)];
+		[icon setCenter:CGPointMake(self.detailView.frame.size.width/2-80,30)];
+		[self.detailView addSubview:icon];
+		
 		UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
 		[titleLabel setText:@"Ritop"];
 		[titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
@@ -157,6 +162,15 @@
 		[versionLabel sizeToFit];
 		[versionLabel setCenter:CGPointMake(self.detailView.frame.size.width/2+20, 20)];
 		[self.detailView addSubview:versionLabel];
+		
+		UILabel *rittmeyerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
+		[rittmeyerLabel setText:@"rittmeyer"];
+		[rittmeyerLabel setFont:[UIFont boldSystemFontOfSize:18]];
+		[rittmeyerLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
+		[rittmeyerLabel setBackgroundColor:[UIColor clearColor]];
+		[rittmeyerLabel sizeToFit];
+		[rittmeyerLabel setCenter:CGPointMake(self.detailView.frame.size.width/2-14, 40)];
+		[self.detailView addSubview:rittmeyerLabel];
 		
 		UILabel *wasbuiltLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
 		[wasbuiltLabel setText:@"Design & Implementation by:"];
