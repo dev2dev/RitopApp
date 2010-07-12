@@ -275,7 +275,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
+									<integer>17</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -316,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1E4FAB4011DA7F2C00819765</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SettingsModalViewController.m</string>
+								<string>BasicChartView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1E4FAB4111DA7F2C00819765</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SettingsModalViewController.m</string>
+										<string>BasicChartView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1EB5089D11EA1D3D0047F0D8</string>
+										<string>1EB509D511EBB2D50047F0D8</string>
 										<key>history</key>
 										<array>
 											<string>1E69C2EA11DDA3E3000F2A77</string>
@@ -352,18 +352,18 @@
 											<string>1EB506E611E9FDE80047F0D8</string>
 											<string>1EB506FB11EA017C0047F0D8</string>
 											<string>1EB506FE11EA017C0047F0D8</string>
-											<string>1EB5077211EA07540047F0D8</string>
-											<string>1EB5080011EA0DF20047F0D8</string>
 											<string>1EB5080111EA0DF20047F0D8</string>
-											<string>1EB5081811EA12460047F0D8</string>
 											<string>1EB5081A11EA12460047F0D8</string>
-											<string>1EB5084811EA14850047F0D8</string>
-											<string>1EB5084911EA14850047F0D8</string>
-											<string>1EB5085B11EA1AE10047F0D8</string>
 											<string>1EB5085C11EA1AE10047F0D8</string>
 											<string>1EB5086711EA1B4F0047F0D8</string>
-											<string>1EB5086811EA1B4F0047F0D8</string>
-											<string>1EB5089C11EA1D3A0047F0D8</string>
+											<string>1EB508A611EA45330047F0D8</string>
+											<string>1EB508A711EA45330047F0D8</string>
+											<string>1EB508FE11EB99920047F0D8</string>
+											<string>1EB5092811EB9C3A0047F0D8</string>
+											<string>1EB5092911EB9C3A0047F0D8</string>
+											<string>1EB5093011EB9D170047F0D8</string>
+											<string>1EB5097611EBA79C0047F0D8</string>
+											<string>1EB509D411EBB2D30047F0D8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -680,6 +680,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1EB509D611EBB2D50047F0D8</string>
 		<string>1EB507CF11EA0CA10047F0D8</string>
 		<string>1EB507C811EA0C8A0047F0D8</string>
 		<string>/Users/tonisuter/RitopApp/RitopApp.xcodeproj</string>

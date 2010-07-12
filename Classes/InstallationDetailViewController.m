@@ -114,6 +114,20 @@
 																														 [NSNumber numberWithFloat:90],
 																														 [NSNumber numberWithFloat:30],
 																														 [NSNumber numberWithFloat:45],
+																														 [NSNumber numberWithFloat:54],
+																														 [NSNumber numberWithFloat:233],
+																														 [NSNumber numberWithFloat:26],
+																														 [NSNumber numberWithFloat:99],
+																														 [NSNumber numberWithFloat:155],
+																														 [NSNumber numberWithFloat:121],
+																														 [NSNumber numberWithFloat:11],
+																														 [NSNumber numberWithFloat:90],
+																														 [NSNumber numberWithFloat:60],
+																														 [NSNumber numberWithFloat:150],
+																														 [NSNumber numberWithFloat:109],
+																														 [NSNumber numberWithFloat:199],
+																														 [NSNumber numberWithFloat:122],
+																														 [NSNumber numberWithFloat:87],
 																														 nil]];
 	}
 	else if(indexPath.row == 2)  {

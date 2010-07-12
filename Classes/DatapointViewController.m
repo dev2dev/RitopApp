@@ -36,8 +36,33 @@
 											inView:[self.view superview]
 						  permittedArrowDirections:UIPopoverArrowDirectionDown
 										  animated:YES];
+	
+	
+	
+
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.ssvmuri.ch/apns/test.php"]];
+	[request setHTTPMethod:@"POST"];
+	[request setValue:@"text/xml" forHTTPHeaderField:@"Content-type"];
+
+	NSString *xmlString = @"<data><item>Item 1</item><item>Item 2</item></data>";
+	[request setValue:[NSString stringWithFormat:@"%d", [xmlString length]] forHTTPHeaderField:@"Content-length"];
+	[request setHTTPBody:[xmlString dataUsingEncoding:NSUTF8StringEncoding]];
+
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
+	 
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response  {
+
+	 
+	 }
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data  {
+	unsigned char aBuffer[[data length]];
+	[data getBytes:aBuffer length:[data length]];
+	NSLog(@"%s", aBuffer);
+}
+	 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.
     return YES;
