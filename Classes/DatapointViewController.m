@@ -1,5 +1,5 @@
 #import "DatapointViewController.h"
-
+//#import <CoreFoundation/CoreFoundation.h>
 
 @implementation DatapointViewController
 
@@ -61,7 +61,33 @@
 	unsigned char aBuffer[[data length]];
 	[data getBytes:aBuffer length:[data length]];
 	NSLog(@"%s", aBuffer);
+	
+	
+	NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
+	[parser setDelegate:self]; // The parser calls methods in this class
+    [parser setShouldProcessNamespaces:NO]; // We don't care about namespaces
+    [parser setShouldReportNamespacePrefixes:NO]; //
+    [parser setShouldResolveExternalEntities:NO]; // We just want data, no other stuff
+	
+    [parser parse]; // Parse that data..
+	
+    [parser release];
 }
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{	
+	NSLog(@"foundCharacters");
+	NSLog(@"%@", string);
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
+    if (qName) {
+        elementName = qName;
+	}
+}
+
+
+
 	 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.

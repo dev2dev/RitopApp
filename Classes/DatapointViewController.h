@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 
-
 @interface DatapointViewController : UIViewController {
 	UIPopoverController *popoverController;
 }
