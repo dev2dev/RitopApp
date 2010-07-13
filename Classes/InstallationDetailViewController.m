@@ -8,12 +8,6 @@
 - (id)init {
 	self = [super init];
     if (self != nil) {
-		data = [[NSMutableArray alloc] initWithObjects:[NSMutableArray arrayWithObjects:[UIImage imageNamed:@"imageA.png"], 
-														[UIImage imageNamed:@"imageB.png"], 
-														[UIImage imageNamed:@"imageC.png"],nil],
-				[NSMutableArray arrayWithObjects:@"Ventil V1", @"Ventil V2", @"Ventil V3", nil],
-				[NSMutableArray arrayWithObjects:[NSNumber numberWithBool:NO], [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO],nil],
-				nil];
 		[self.tableView setDataSource:self];		
 		[self.tableView setDelegate:self];
     }
@@ -94,56 +88,8 @@
  */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	if(indexPath.row == 0)  {
-		[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setData:[NSMutableArray arrayWithObjects:
-																														 [NSNumber numberWithFloat:25],
-																														 [NSNumber numberWithFloat:77],
-																														 [NSNumber numberWithFloat:34],
-																														 [NSNumber numberWithFloat:11],
-																														 [NSNumber numberWithFloat:14],
-																														 [NSNumber numberWithFloat:19],
-																														 [NSNumber numberWithFloat:99],
-																														 nil]];
-	}
-	else if(indexPath.row == 1)  {
-		[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setData:[NSMutableArray arrayWithObjects:
-																														 [NSNumber numberWithFloat:100],
-																														 [NSNumber numberWithFloat:20],
-																														 [NSNumber numberWithFloat:70],
-																														 [NSNumber numberWithFloat:119],
-																														 [NSNumber numberWithFloat:90],
-																														 [NSNumber numberWithFloat:30],
-																														 [NSNumber numberWithFloat:45],
-																														 [NSNumber numberWithFloat:54],
-																														 [NSNumber numberWithFloat:233],
-																														 [NSNumber numberWithFloat:26],
-																														 [NSNumber numberWithFloat:99],
-																														 [NSNumber numberWithFloat:155],
-																														 [NSNumber numberWithFloat:121],
-																														 [NSNumber numberWithFloat:11],
-																														 [NSNumber numberWithFloat:90],
-																														 [NSNumber numberWithFloat:60],
-																														 [NSNumber numberWithFloat:150],
-																														 [NSNumber numberWithFloat:109],
-																														 [NSNumber numberWithFloat:199],
-																														 [NSNumber numberWithFloat:122],
-																														 [NSNumber numberWithFloat:87],
-																														 nil]];
-	}
-	else if(indexPath.row == 2)  {
-		[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setData:[NSMutableArray arrayWithObjects:
-																														 [NSNumber numberWithFloat:77],
-																														 [NSNumber numberWithFloat:99],
-																														 [NSNumber numberWithFloat:44],
-																														 [NSNumber numberWithFloat:33],
-																														 [NSNumber numberWithFloat:33],
-																														 [NSNumber numberWithFloat:33],
-																														 [NSNumber numberWithFloat:99],
-																														 nil]];
-	}
-
+	[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setData:[[self.data objectAtIndex:2] objectAtIndex:indexPath.row]];
 	[[[[[[self navigationController] splitViewController] viewControllers] objectAtIndex:1] basicChartView] setNeedsDisplay];
-
 }
 
 - (void)didReceiveMemoryWarning {

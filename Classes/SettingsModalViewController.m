@@ -34,7 +34,7 @@
 																								  [UIImage imageNamed:@"anlagenIcon.png"],
 																								  [UIImage imageNamed:@"aboutIcon.png"],
 																								  nil],
-																 [NSMutableArray arrayWithObjects:@"Allgemeines",
+																 [NSMutableArray arrayWithObjects:@"Allgemein",
 																								  @"Darstellung",
 																								  @"Anlagen",
 																								  @"About",
