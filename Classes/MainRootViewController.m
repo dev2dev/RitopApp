@@ -27,8 +27,8 @@
 									nil],
 								   [NSMutableArray arrayWithObjects:
 									[NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:5], [NSNumber numberWithFloat:5], [NSNumber numberWithFloat:10.0], [NSNumber numberWithFloat:10], [NSNumber numberWithFloat:5], [NSNumber numberWithFloat:5], [NSNumber numberWithFloat:10.0], [NSNumber numberWithFloat:10.0], nil],
-									[NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:12.0], [NSNumber numberWithFloat:12.0], [NSNumber numberWithFloat:12.0], [NSNumber numberWithFloat:12.0], nil],
-									[NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:12.0], [NSNumber numberWithFloat:12.0], [NSNumber numberWithFloat:12.0], [NSNumber numberWithFloat:12.0], nil],
+									[NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:10], [NSNumber numberWithFloat:3.0], [NSNumber numberWithFloat:10.0], [NSNumber numberWithFloat:3.0], nil],
+									[NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:12.0], [NSNumber numberWithFloat:11.0], [NSNumber numberWithFloat:10.0], [NSNumber numberWithFloat:9.0], [NSNumber numberWithFloat:8.0], [NSNumber numberWithFloat:9.0], [NSNumber numberWithFloat:10.0], [NSNumber numberWithFloat:11.0], [NSNumber numberWithFloat:12.0], nil],
 									nil],
 								   nil];
 		

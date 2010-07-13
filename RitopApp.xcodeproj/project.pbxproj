@@ -30,6 +30,10 @@
 		1ED8024A11E8D9E600D5EBF8 /* aboutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8024911E8D9E600D5EBF8 /* aboutIcon.png */; };
 		1ED8026A11E8DAD700D5EBF8 /* allgemeinesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8026911E8DAD700D5EBF8 /* allgemeinesIcon.png */; };
 		1ED8027711E8DB6500D5EBF8 /* darstellungIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8027611E8DB6500D5EBF8 /* darstellungIcon.png */; };
+		1EDBB1C911ED02710055A438 /* SettingsCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBB1C811ED02710055A438 /* SettingsCommonViewController.m */; };
+		1EDBB23B11ED0B5A0055A438 /* SettingsDesignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBB23A11ED0B5A0055A438 /* SettingsDesignViewController.m */; };
+		1EDBB24C11ED0DAF0055A438 /* SettingsInstallationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBB24B11ED0DAF0055A438 /* SettingsInstallationViewController.m */; };
+		1EDBB27811ED10060055A438 /* SettingsAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBB27711ED10060055A438 /* SettingsAboutViewController.m */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,14 @@
 		1ED8024911E8D9E600D5EBF8 /* aboutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutIcon.png; sourceTree = "<group>"; };
 		1ED8026911E8DAD700D5EBF8 /* allgemeinesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allgemeinesIcon.png; sourceTree = "<group>"; };
 		1ED8027611E8DB6500D5EBF8 /* darstellungIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darstellungIcon.png; sourceTree = "<group>"; };
+		1EDBB1C711ED02710055A438 /* SettingsCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCommonViewController.h; sourceTree = "<group>"; };
+		1EDBB1C811ED02710055A438 /* SettingsCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCommonViewController.m; sourceTree = "<group>"; };
+		1EDBB23911ED0B5A0055A438 /* SettingsDesignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsDesignViewController.h; sourceTree = "<group>"; };
+		1EDBB23A11ED0B5A0055A438 /* SettingsDesignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsDesignViewController.m; sourceTree = "<group>"; };
+		1EDBB24A11ED0DAF0055A438 /* SettingsInstallationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsInstallationViewController.h; sourceTree = "<group>"; };
+		1EDBB24B11ED0DAF0055A438 /* SettingsInstallationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsInstallationViewController.m; sourceTree = "<group>"; };
+		1EDBB27611ED10060055A438 /* SettingsAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAboutViewController.h; sourceTree = "<group>"; };
+		1EDBB27711ED10060055A438 /* SettingsAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsAboutViewController.m; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* RitopApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RitopApp_Prefix.pch; sourceTree = "<group>"; };
@@ -90,6 +102,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1EDBB1C511ED023D0055A438 /* Settings */,
 				1D3623240D0F684500981E51 /* RitopAppAppDelegate.h */,
 				1D3623250D0F684500981E51 /* RitopAppAppDelegate.m */,
 				1E6C373111DF553F00096C39 /* MainDetailViewController.h */,
@@ -98,8 +111,6 @@
 				1E6C374111DF579700096C39 /* MainRootViewController.m */,
 				1E5F451711DF8461000B750B /* MainSplitViewController.h */,
 				1E5F451811DF8461000B750B /* MainSplitViewController.m */,
-				1E5F458311DF8D8B000B750B /* SettingsModalViewController.h */,
-				1E5F458411DF8D8B000B750B /* SettingsModalViewController.m */,
 				1E8CBBF011E11DCC000F62BC /* DatapointViewController.h */,
 				1E8CBBF111E11DCC000F62BC /* DatapointViewController.m */,
 				1E8B194411E51C520096101A /* InstallationDetailViewController.h */,
@@ -116,6 +127,23 @@
 				1D6058910D05DD3D006BFB54 /* RitopApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1EDBB1C511ED023D0055A438 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F458311DF8D8B000B750B /* SettingsModalViewController.h */,
+				1E5F458411DF8D8B000B750B /* SettingsModalViewController.m */,
+				1EDBB1C711ED02710055A438 /* SettingsCommonViewController.h */,
+				1EDBB1C811ED02710055A438 /* SettingsCommonViewController.m */,
+				1EDBB23911ED0B5A0055A438 /* SettingsDesignViewController.h */,
+				1EDBB23A11ED0B5A0055A438 /* SettingsDesignViewController.m */,
+				1EDBB24A11ED0DAF0055A438 /* SettingsInstallationViewController.h */,
+				1EDBB24B11ED0DAF0055A438 /* SettingsInstallationViewController.m */,
+				1EDBB27611ED10060055A438 /* SettingsAboutViewController.h */,
+				1EDBB27711ED10060055A438 /* SettingsAboutViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
@@ -242,6 +270,10 @@
 				1E8CBBF211E11DCC000F62BC /* DatapointViewController.m in Sources */,
 				1E8B194611E51C520096101A /* InstallationDetailViewController.m in Sources */,
 				1EB506F811EA00250047F0D8 /* BasicChartView.m in Sources */,
+				1EDBB1C911ED02710055A438 /* SettingsCommonViewController.m in Sources */,
+				1EDBB23B11ED0B5A0055A438 /* SettingsDesignViewController.m in Sources */,
+				1EDBB24C11ED0DAF0055A438 /* SettingsInstallationViewController.m in Sources */,
+				1EDBB27811ED10060055A438 /* SettingsAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

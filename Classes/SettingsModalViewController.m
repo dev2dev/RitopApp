@@ -7,6 +7,10 @@
 //
 
 #import "SettingsModalViewController.h"
+#import "SettingsCommonViewController.h"
+#import "SettingsDesignViewController.h"
+#import "SettingsInstallationViewController.h"
+#import "SettingsAboutViewController.h"
 
 
 @implementation SettingsModalViewController
@@ -14,6 +18,10 @@
 @synthesize rootTableView;
 @synthesize rootTableData;
 @synthesize detailView;
+@synthesize commonViewController;
+@synthesize designViewController;
+@synthesize installationViewController;
+@synthesize aboutViewController;
 
 - (void)loadView {
 	[super loadView];
@@ -44,6 +52,19 @@
 	self.detailView = [[UIView alloc] initWithFrame:CGRectMake(200, 0, 340, 580)];
 	[detailView setBackgroundColor:[UIColor darkGrayColor]];
 	[self.view addSubview:detailView];
+	
+	commonViewController = [[SettingsCommonViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	[commonViewController.tableView setFrame:CGRectMake(0, 0, 340, 580)];
+	[self.detailView addSubview:commonViewController.view];
+	
+	designViewController = [[SettingsDesignViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	[designViewController.tableView setFrame:CGRectMake(0, 0, 340, 580)];
+	
+	installationViewController = [[SettingsInstallationViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	[installationViewController.tableView setFrame:CGRectMake(0, 0, 340, 580)];
+	
+	aboutViewController = [[SettingsAboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	[aboutViewController.tableView setFrame:CGRectMake(0, 0, 340, 580)];
 }
 
 -(void) viewDidLoad  {
@@ -133,80 +154,22 @@
  */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[self.detailView removeFromSuperview];
-	[self.detailView release];
-	self.detailView = [[UIView alloc] initWithFrame:CGRectMake(200, 0, 340, 580)];
-	[detailView setBackgroundColor:[UIColor darkGrayColor]];
-	[self.view addSubview:self.detailView];
-
-	if([indexPath row] == 3)  {
-		UIImageView *icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon.png"]];
-		[icon setFrame:CGRectMake(0,0,40,40)];
-		[icon setCenter:CGPointMake(self.detailView.frame.size.width/2-80,30)];
-		[self.detailView addSubview:icon];
-		
-		UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
-		[titleLabel setText:@"Ritop"];
-		[titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
-		[titleLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-		[titleLabel setBackgroundColor:[UIColor clearColor]];
-		[titleLabel sizeToFit];
-		[titleLabel setCenter:CGPointMake(self.detailView.frame.size.width/2-30, 20)];
-		[self.detailView addSubview:titleLabel];
-		
-		UILabel *versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
-		[versionLabel setText:@"1.0.1"];
-		[versionLabel setFont:[UIFont systemFontOfSize:18]];
-		[versionLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-		[versionLabel setBackgroundColor:[UIColor clearColor]];
-		[versionLabel sizeToFit];
-		[versionLabel setCenter:CGPointMake(self.detailView.frame.size.width/2+20, 20)];
-		[self.detailView addSubview:versionLabel];
-		
-		UILabel *rittmeyerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
-		[rittmeyerLabel setText:@"rittmeyer"];
-		[rittmeyerLabel setFont:[UIFont boldSystemFontOfSize:18]];
-		[rittmeyerLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-		[rittmeyerLabel setBackgroundColor:[UIColor clearColor]];
-		[rittmeyerLabel sizeToFit];
-		[rittmeyerLabel setCenter:CGPointMake(self.detailView.frame.size.width/2-14, 40)];
-		[self.detailView addSubview:rittmeyerLabel];
-		
-		UILabel *wasbuiltLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
-		[wasbuiltLabel setText:@"Design & Implementation by:"];
-		[wasbuiltLabel setFont:[UIFont boldSystemFontOfSize:16]];
-		[wasbuiltLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-		[wasbuiltLabel setBackgroundColor:[UIColor clearColor]];
-		[wasbuiltLabel sizeToFit];
-		[wasbuiltLabel setCenter:CGPointMake(self.detailView.frame.size.width/2, 100)];
-		[self.detailView addSubview:wasbuiltLabel];
-		
-		UILabel *simonLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
-		[simonLabel setText:@"Simeon Haefliger"];
-		[simonLabel setFont:[UIFont systemFontOfSize:16]];
-		[simonLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-		[simonLabel setBackgroundColor:[UIColor clearColor]];
-		[simonLabel sizeToFit];
-		[simonLabel setCenter:CGPointMake(self.detailView.frame.size.width/2, 130)];
-		[self.detailView addSubview:simonLabel];
-		
-		UILabel *christianLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
-		[christianLabel setText:@"Christian Gwerder"];
-		[christianLabel setFont:[UIFont systemFontOfSize:16]];
-		[christianLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-		[christianLabel setBackgroundColor:[UIColor clearColor]];
-		[christianLabel sizeToFit];
-		[christianLabel setCenter:CGPointMake(self.detailView.frame.size.width/2, 150)];
-		[self.detailView addSubview:christianLabel];
-		
-		UILabel *toniLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,0,0)];
-		[toniLabel setText:@"Toni Suter"];
-		[toniLabel setFont:[UIFont systemFontOfSize:16]];
-		[toniLabel setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
-		[toniLabel setBackgroundColor:[UIColor clearColor]];
-		[toniLabel sizeToFit];
-		[toniLabel setCenter:CGPointMake(self.detailView.frame.size.width/2, 170)];
-		[self.detailView addSubview:toniLabel];
+	//remove all subviews
+	for (UIView *view in self.detailView.subviews) {
+		[view removeFromSuperview];
+	}
+	
+	if(indexPath.row == 0)  {
+		[self.detailView addSubview:commonViewController.view];
+	}
+	else if(indexPath.row == 1)  {
+		[self.detailView addSubview:designViewController.view];
+	}
+	else if(indexPath.row == 2)  {
+		[self.detailView addSubview:installationViewController.view];
+	}
+	else if(indexPath.row == 3)  {
+		[self.detailView addSubview:aboutViewController.view];
 	}
 }
 
